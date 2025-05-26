@@ -133,7 +133,6 @@ tensorboard-data-server==0.7.1
 threadpoolctl==3.2.0
 tokenizers==0.19.1
 torch==2.1.2
-# torch @ file:///data/sunwangtao/torch-2.1.2%2Bcu121-cp38-cp38-linux_x86_64.whl#sha256=daa179bb558f78f2165db974a6744ec8de2ea71eb6aaf362bdae7616012c0302
 # torchaudio==2.0.2
 # torchvision==0.15.2
 tqdm==4.66.1
