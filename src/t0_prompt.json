@@ -1,0 +1,1452 @@
+{
+    "adversarial_qa_dbert_answer_the_following_q": {
+        "rule": "{% if metadata.split != \"test\" %}\nGiven the following passage\n\n\"{{context}}\",\n\nanswer the following question. Note that the answer is present within the text.\n\nQuestion: {{question}} |||\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "answer_the_following_q",
+        "x": "adversarial_qa/dbert"
+    },
+    "adversarial_qa_dbert_based_on": {
+        "rule": "{% if metadata.split != \"test\" %}\nExtract the answer to the question from the following context.\nQuestion: {{question}}\nContext: {{context}}|||\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "based_on",
+        "x": "adversarial_qa/dbert"
+    },
+    "adversarial_qa_dbert_generate_question": {
+        "rule": "I want to test the ability of students to read a passage and answer questions about it. Could you please come up with a good question for the passage \"{{context}}\"? |||\n{{question}}",
+        "prompt": "generate_question",
+        "x": "adversarial_qa/dbert"
+    },
+    "adversarial_qa_dbert_question_context_answer": {
+        "rule": "{% if metadata.split != \"test\" %}\nQuestion: \"{{question}}\"\n\nContext: \"{{context}}\"\n\nAnswer:\n|||\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "question_context_answer",
+        "x": "adversarial_qa/dbert"
+    },
+    "adversarial_qa_dbert_tell_what_it_is": {
+        "rule": "{% if metadata.split != \"test\" %}\nI know that the answer to the question \"{{question}}\" is in \"{{context}}\". Can you tell me what it is? |||\n\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "tell_what_it_is",
+        "x": "adversarial_qa/dbert"
+    },
+    "adversarial_qa_dbidaf_answer_the_following_q": {
+        "rule": "{% if metadata.split != \"test\" %}\nGiven the following passage\n\n\"{{context}}\",\n\nanswer the following question. Note that the answer is present within the text.\n\nQuestion: {{question}} |||\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "answer_the_following_q",
+        "x": "adversarial_qa/dbidaf"
+    },
+    "adversarial_qa_dbidaf_based_on": {
+        "rule": "{% if metadata.split != \"test\" %}\nExtract the answer to the question from the following context.\nQuestion: {{question}}\nContext: {{context}}|||\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "based_on",
+        "x": "adversarial_qa/dbidaf"
+    },
+    "adversarial_qa_dbidaf_generate_question": {
+        "rule": "I want to test the ability of students to read a passage and answer questions about it. Could you please come up with a good question for the passage \"{{context}}\"? |||\n{{question}}",
+        "prompt": "generate_question",
+        "x": "adversarial_qa/dbidaf"
+    },
+    "adversarial_qa_dbidaf_question_context_answer": {
+        "rule": "{% if metadata.split != \"test\" %}\nQuestion: \"{{question}}\"\n\nContext: \"{{context}}\"\n\nAnswer:\n|||\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "question_context_answer",
+        "x": "adversarial_qa/dbidaf"
+    },
+    "adversarial_qa_dbidaf_tell_what_it_is": {
+        "rule": "{% if metadata.split != \"test\" %}\nI know that the answer to the question \"{{question}}\" is in \"{{context}}\". Can you tell me what it is? |||\n\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "tell_what_it_is",
+        "x": "adversarial_qa/dbidaf"
+    },
+    "adversarial_qa_droberta_answer_the_following_q": {
+        "rule": "{% if metadata.split != \"test\" %}\nGiven the following passage\n\n\"{{context}}\",\n\nanswer the following question. Note that the answer is present within the text.\n\nQuestion: {{question}} |||\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "answer_the_following_q",
+        "x": "adversarial_qa/droberta"
+    },
+    "adversarial_qa_droberta_based_on": {
+        "rule": "{% if metadata.split != \"test\" %}\nExtract the answer to the question from the following context.\nQuestion: {{question}}\nContext: {{context}}|||\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "based_on",
+        "x": "adversarial_qa/droberta"
+    },
+    "adversarial_qa_droberta_generate_question": {
+        "rule": "I want to test the ability of students to read a passage and answer questions about it. Could you please come up with a good question for the passage \"{{context}}\"? |||\n{{question}}",
+        "prompt": "generate_question",
+        "x": "adversarial_qa/droberta"
+    },
+    "adversarial_qa_droberta_question_context_answer": {
+        "rule": "{% if metadata.split != \"test\" %}\nQuestion: \"{{question}}\"\n\nContext: \"{{context}}\"\n\nAnswer:\n|||\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "question_context_answer",
+        "x": "adversarial_qa/droberta"
+    },
+    "adversarial_qa_droberta_tell_what_it_is": {
+        "rule": "{% if metadata.split != \"test\" %}\nI know that the answer to the question \"{{question}}\" is in \"{{context}}\". Can you tell me what it is? |||\n\n{{answers.text | choice}}\n{% endif %}",
+        "prompt": "tell_what_it_is",
+        "x": "adversarial_qa/droberta"
+    },
+    "ag_news_classify": {
+        "rule": "{{text}} \nWhat label best describes this news article? ||| \n{{answer_choices[label] }}",
+        "prompt": "classify",
+        "x": "ag_news"
+    },
+    "ag_news_classify_question_first": {
+        "rule": "What label best describes this news article?\n{{text}} ||| \n{{answer_choices[label] }}",
+        "prompt": "classify_question_first",
+        "x": "ag_news"
+    },
+    "ag_news_classify_with_choices": {
+        "rule": "{{text}} \nIs this a piece of news regarding {{\"world politics, sports, business, or science and technology\"}}? ||| \n{{answer_choices[label] }}",
+        "prompt": "classify_with_choices",
+        "x": "ag_news"
+    },
+    "ag_news_classify_with_choices_question_first": {
+        "rule": "Is this a piece of news regarding {{\"world politics, sports, business, or science and technology\"}}?\n{{text}} \n||| \n{{answer_choices[label] }}",
+        "prompt": "classify_with_choices_question_first",
+        "x": "ag_news"
+    },
+    "ag_news_recommend": {
+        "rule": "Would you recommend the following article to a {{\"politician\"}}, an {{\"athlete\"}}, a {{\"business executive\"}}, or a {{\"scientist\"}}?\n\n{{ text }}\n|||\n{{answer_choices[label]}}",
+        "prompt": "recommend",
+        "x": "ag_news"
+    },
+    "ag_news_which_section": {
+        "rule": "{{text}} \n\nWhich section of a newspaper would this article likely appear in? ||| \n{{answer_choices[label] }}",
+        "prompt": "which_section",
+        "x": "ag_news"
+    },
+    "ag_news_which_section_choices": {
+        "rule": "{{text}} \n\nWhich of the following sections of a newspaper would this article likely appear in? {{\"World News\"}}, {{\"Sports\"}}, {{\"Business\"}}, or {{\"Science and Technology\"}}? ||| \n{{answer_choices[label] }}",
+        "prompt": "which_section_choices",
+        "x": "ag_news"
+    },
+    "amazon_polarity_Is_this_product_review_positive": {
+        "rule": "Is this product review positive?\nTitle: {{title}}\nReview: {{content}}\nAnswer: |||\n{{answer_choices[label]}}",
+        "prompt": "Is_this_product_review_positive",
+        "x": "amazon_polarity"
+    },
+    "amazon_polarity_Is_this_review": {
+        "rule": "Title: {{title}}\nReview: {{content}}\nIs the review positive or negative? |||\n{{answer_choices[label]}}",
+        "prompt": "Is_this_review",
+        "x": "amazon_polarity"
+    },
+    "amazon_polarity_Is_this_review_negative": {
+        "rule": "Title: {{title}}\nReview: {{content}}\nIs this product review negative?|||\n{{answer_choices[label]}}",
+        "prompt": "Is_this_review_negative",
+        "x": "amazon_polarity"
+    },
+    "amazon_polarity_User_recommend_this_product": {
+        "rule": "Based on this review, would the user recommend this product?\n===\nReview: {{content}}\nAnswer: |||\n{{answer_choices[label]}}",
+        "prompt": "User_recommend_this_product",
+        "x": "amazon_polarity"
+    },
+    "amazon_polarity_convey_negative_or_positive_sentiment": {
+        "rule": "Title: {{title}}\nReview: {{content}}\nDoes this product review convey a negative or positive sentiment?|||\n{{answer_choices[label]}}",
+        "prompt": "convey_negative_or_positive_sentiment",
+        "x": "amazon_polarity"
+    },
+    "amazon_polarity_flattering_or_not": {
+        "rule": "Title: {{title}}\nProduct review: {{content}}\nWould you say this review depicts the product in a {{answer_choices[1]}} or {{answer_choices[0]}} light?\n|||\n{{answer_choices[label]}} ",
+        "prompt": "flattering_or_not",
+        "x": "amazon_polarity"
+    },
+    "amazon_polarity_negative_or_positive_tone": {
+        "rule": "Is there a negative or positive tone to this product review?\n===\nTitle: {{title}}\nReview: {{content}}\nAnswer: |||\n{{answer_choices[label]}}",
+        "prompt": "negative_or_positive_tone",
+        "x": "amazon_polarity"
+    },
+    "amazon_polarity_user_satisfied": {
+        "rule": "Here is a review left by a customer on a product. Would you say he was {{answer_choices[1]}} or {{answer_choices[0]}}?\nTitle: {{title}}\nReview: {{content}}\n|||\n{{answer_choices[label]}} ",
+        "prompt": "user_satisfied",
+        "x": "amazon_polarity"
+    },
+    "amazon_polarity_would_you_buy": {
+        "rule": "You are considering whether to buy a product. You look at the reviews. Would the following review {{answer_choices[0]}} or {{answer_choices[1]}} the chances of you buying the product?\nReview title: {{title}}\nProduct review: {{content}}\n|||\n{{answer_choices[label]}} ",
+        "prompt": "would_you_buy",
+        "x": "amazon_polarity"
+    },
+    "app_reviews_categorize_rating_using_review": {
+        "rule": "Given this review: \"{{review}}\"\nWould you recommend this app to a friend? {{answer_choices[0]}}, {{answer_choices[1]}}, {{answer_choices[2]}}, {{answer_choices[3]}}, or {{answer_choices[4]}}?\n|||\n{{answer_choices[star-1]}}",
+        "prompt": "categorize_rating_using_review",
+        "x": "app_reviews"
+    },
+    "app_reviews_convert_to_rating": {
+        "rule": "On a scale of 1-5 (with 1 being least favorable and 5 being most favorable), how would you rate this review? \"{{review}}\"\n|||\n{{star}}",
+        "prompt": "convert_to_rating",
+        "x": "app_reviews"
+    },
+    "app_reviews_convert_to_star_rating": {
+        "rule": "What would be the \u2605-rating of this review (\u2605 being the lowest and \u2605\u2605\u2605\u2605\u2605 being the highest)? \"{{review}}\"\n|||\n{{answer_choices[star-1]}}",
+        "prompt": "convert_to_star_rating",
+        "x": "app_reviews"
+    },
+    "app_reviews_generate_review": {
+        "rule": "Generate a {{star}}-star review (1 being lowest and 5 being highest) about an app with package {{package_name}}.\n|||\n{{review}}",
+        "prompt": "generate_review",
+        "x": "app_reviews"
+    },
+    "cnn_dailymail_3.0.0_2_or_3_sentences": {
+        "rule": "In 2 or 3 sentences, what are the main points one should remember from this news article?\n\nArticle: {{article}} |||\n{{highlights}}",
+        "prompt": "2_or_3_sentences",
+        "x": "cnn_dailymail/3.0.0"
+    },
+    "cnn_dailymail_3.0.0_generate_story": {
+        "rule": "Generate a story from key plot points:\n\n{{highlights}} |||\n{{article}}",
+        "prompt": "generate_story",
+        "x": "cnn_dailymail/3.0.0"
+    },
+    "cnn_dailymail_3.0.0_news_card_view": {
+        "rule": "Condense the article down to the essentials to present it in the form of short cards in mobile news apps:\n\n{{article}} |||\n{{highlights}}",
+        "prompt": "news_card_view",
+        "x": "cnn_dailymail/3.0.0"
+    },
+    "cnn_dailymail_3.0.0_news_stock": {
+        "rule": "Extract key points from the article based on which the stock market could react:\n\n{{article}} |||\n{{highlights}}",
+        "prompt": "news_stock",
+        "x": "cnn_dailymail/3.0.0"
+    },
+    "cnn_dailymail_3.0.0_news_summary": {
+        "rule": "Summarise the article:\n\n{{article}} |||\n{{highlights}}",
+        "prompt": "news_summary",
+        "x": "cnn_dailymail/3.0.0"
+    },
+    "cnn_dailymail_3.0.0_spice_up_story": {
+        "rule": "What details would you include in a storyline to make it more engaging and informative?\n\n{{highlights}} |||\n{{article}}",
+        "prompt": "spice_up_story",
+        "x": "cnn_dailymail/3.0.0"
+    },
+    "cnn_dailymail_3.0.0_sum_in_brief": {
+        "rule": "Sum the following article in brief: {{article}}|||{{highlights}}",
+        "prompt": "sum_in_brief",
+        "x": "cnn_dailymail/3.0.0"
+    },
+    "cnn_dailymail_3.0.0_tldr_summary": {
+        "rule": "Could you please generate a TLDR (Too Long Didn't Read) summary of the following news article?\n\nArticle: {{article}} |||\n{{highlights}}",
+        "prompt": "tldr_summary",
+        "x": "cnn_dailymail/3.0.0"
+    },
+    "cnn_dailymail_3.0.0_write_an_outline": {
+        "rule": "Can you write an outline of the following article in a few points?\n\nArticle: {{article}}|||\n{{highlights}}",
+        "prompt": "write_an_outline",
+        "x": "cnn_dailymail/3.0.0"
+    },
+    "common_gen_Example_prompt": {
+        "rule": "Humans can easily string together abstract concepts to form a coherent sentence. \nFor example, with the concepts {{ concepts | join(\", \") }}, a simple sentence can be  \n|||\n{{target}}",
+        "prompt": "Example prompt",
+        "x": "common_gen"
+    },
+    "common_gen_Given_concepts_type_1": {
+        "rule": "Given the list of concepts: {{ concepts | join(\", \") }}; \nGenerate a sentence with all the concepts :\n|||\n{{target}}",
+        "prompt": "Given concepts type 1",
+        "x": "common_gen"
+    },
+    "common_gen_Given_concepts_type_2": {
+        "rule": "Ignoring the order of the concepts: {{ concepts | join(\", \") }}; \nGenerate a sentence with all the concepts :\n|||\n{{target}}",
+        "prompt": "Given concepts - type 2",
+        "x": "common_gen"
+    },
+    "common_gen_Put_together": {
+        "rule": "Put the concepts together to form a sentence: {{ concepts | join(\", \") }}.\n|||\n{{target}}",
+        "prompt": "Put together",
+        "x": "common_gen"
+    },
+    "common_gen_choice_in_concept_centric_sentence_generation": {
+        "rule": "Construct a sentence with the word {{ concepts | choice }}. \n\nHint: Use {{concepts | join(\", \")}} to restrict the output sentence.\n|||\n{{target}}",
+        "prompt": "choice in concept centric sentence generation",
+        "x": "common_gen"
+    },
+    "common_gen_random_task_template_prompt": {
+        "rule": "{% set seq = [ \n'From the concepts mentioned below, generate a sentence:', \n'Convert the concepts to a sentence:', \n'Given the list of concepts, write a sentence:'\n] %} \n{{ seq | choice }}\n{{ concepts | join(\", \") }}\n|||\n{{target}}",
+        "prompt": "random task template prompt",
+        "x": "common_gen"
+    },
+    "common_gen_sentence_to_concepts": {
+        "rule": "We have the sentence: {{target}}; \nExtract all the key concepts: \n|||\n{{ concepts | join(\", \") }}",
+        "prompt": "sentence to concepts",
+        "x": "common_gen"
+    },
+    "common_gen_topic_to_sentence": {
+        "rule": "Can you write a sentence about the topic {{concepts | choice}}?\n|||\n{{target}}",
+        "prompt": "topic to sentence",
+        "x": "common_gen"
+    },
+    "common_gen_topics_from_the_sentence": {
+        "rule": "What are the topics in the sentence: {{target}}\n|||\n{{ concepts | join(\", \") }}",
+        "prompt": "topics from the sentence",
+        "x": "common_gen"
+    },
+    "cos_e_v1.11_aligned_with_common_sense": {
+        "rule": "Here's a question and a few possible answers: \n\nQ: {{ question }}\nPossible A: {{ choices | join(\", \") }}\n\nWhy is \"{{answer}}\" an answer aligned with human common sense? \n|||\n{{ abstractive_explanation }}",
+        "prompt": "aligned_with_common_sense",
+        "x": "cos_e/v1.11"
+    },
+    "cos_e_v1.11_description_question_option_id": {
+        "rule": "Pick the option in line with common sense to answer the question.\nQuestion: {{ question }}\nOptions:\n{% for k in range(choices | length) %}\n{{'. '.join([answer_choices[k], choices[k]])}}\n{% endfor %}\n|||\n{{ answer_choices[choices.index(answer)] }}",
+        "prompt": "description_question_option_id",
+        "x": "cos_e/v1.11"
+    },
+    "cos_e_v1.11_description_question_option_text": {
+        "rule": "Pick the option in line with common sense to answer the question.\nQuestions: {{ question }}\nOptions:\n- {{ answer_choices | join(\"\\n- \") }}\n|||\n{{ answer }}",
+        "prompt": "description_question_option_text",
+        "x": "cos_e/v1.11"
+    },
+    "cos_e_v1.11_explain_why_human": {
+        "rule": "Question: {{ question }}\nOptions:\n- {{ choices | join(\"\\n- \") }}\n\nExplain why a human would choose \"{{answer}}\" to answer the question above:\n|||\n{{ abstractive_explanation }}",
+        "prompt": "explain_why_human",
+        "x": "cos_e/v1.11"
+    },
+    "cos_e_v1.11_generate_explanation_given_text": {
+        "rule": "Question: {{ question }}\nOptions:\n- {{ choices | join(\"\\n- \") }}\n\nThe answer is \"{{ answer }}\" because\n|||\n{{ abstractive_explanation }}",
+        "prompt": "generate_explanation_given_text",
+        "x": "cos_e/v1.11"
+    },
+    "cos_e_v1.11_i_think": {
+        "rule": "Here's a question: {{ question }}\n\nHere are possible answers to this question:\n- {{ choices | join(\"\\n- \") }}\n\nI believe the correct choice is \"{{answer}}\", here's why:\n|||\n{{ abstractive_explanation }}",
+        "prompt": "i_think",
+        "x": "cos_e/v1.11"
+    },
+    "cos_e_v1.11_question_description_option_id": {
+        "rule": "{{ question }}\nChoose the most suitable option to answer the above question.\nOptions\uff1a\n{% for k in range(choices | length) %}\n{{'. '.join([answer_choices[k], choices[k]])}}\n{% endfor %}\n|||\n{{ answer_choices[choices.index(answer)] }}",
+        "prompt": "question_description_option_id",
+        "x": "cos_e/v1.11"
+    },
+    "cos_e_v1.11_question_description_option_text": {
+        "rule": "{{ question }}\nChoose the most suitable option to answer the above question.\nOptions:\n- {{ answer_choices | join(\"\\n- \") }}\n|||\n{{ answer }}",
+        "prompt": "question_description_option_text",
+        "x": "cos_e/v1.11"
+    },
+    "cos_e_v1.11_question_option_description_id": {
+        "rule": "{{ question }}\n{% for k in range(choices | length) %}\n{{'. '.join([answer_choices[k], choices[k]])}}\n{% endfor %}\nThe best answer is\n|||\n{{ answer_choices[choices.index(answer)] }}",
+        "prompt": "question_option_description_id",
+        "x": "cos_e/v1.11"
+    },
+    "cos_e_v1.11_question_option_description_text": {
+        "rule": "{{ question }}\n- {{ answer_choices | join(\"\\n- \") }}\n\nThe best answer is\n|||\n{{ answer }}",
+        "prompt": "question_option_description_text",
+        "x": "cos_e/v1.11"
+    },
+    "cos_e_v1.11_rationale": {
+        "rule": "Question: {{question}}\n\nChoices: \n- {{ choices | join(\"\\n- \") }}\n\nThe rationale to choose \"{{answer}}\" as the answer is that: |||\n{{abstractive_explanation}}",
+        "prompt": "rationale",
+        "x": "cos_e/v1.11"
+    },
+    "cosmos_qa_context_answer_to_question": {
+        "rule": "Based on the context and the answer, generate a question. \n\nContext: {{context}}\n\nAnswer:\n{% if label == 0 %}\n{{answer0}}\n{% elif label == 1 %}\n{{answer1}}\n{% elif label == 2 %}\n{{answer2}}\n{% elif label == 3 %}\n{{answer3}}\n{% endif %}\n|||\n{{question}}",
+        "prompt": "context_answer_to_question",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_context_description_question_answer_id": {
+        "rule": "{{ context }}\nAccording to the above context, choose the best option to answer the following question.\nQuestion: {{ question }}\nOptions:\nA. {{ answer0 }}\nB. {{ answer1 }}\nC. {{ answer2 }}\nD. {{ answer3 }}\n|||\n{{ answer_choices[label] }}",
+        "prompt": "context_description_question_answer_id",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_context_description_question_answer_text": {
+        "rule": "{{ context }}\nAccording to the above context, choose the best option to answer the following question.\nQuestion: {{ question }}\nOptions:\n- {{answer_choices | join(\"\\n - \")}}\n|||\n{{answer_choices[label]}}",
+        "prompt": "context_description_question_answer_text",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_context_description_question_text": {
+        "rule": "{{ context }}\nAccording to the above context, answer the following question.\n{{ question }}\n|||\n{{answer_choices[label]}}",
+        "prompt": "context_description_question_text",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_context_question_description_answer_id": {
+        "rule": "{{ context }}\n{{ question }}\nPick the best answer from the following options:\nA. {{ answer0 }}\nB. {{ answer1 }}\nC. {{ answer2 }}\nD. {{ answer3 }}\n|||\n{{ answer_choices[label] }}",
+        "prompt": "context_question_description_answer_id",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_context_question_description_answer_text": {
+        "rule": "{{ context }}\n{{ question }}\nPick the best answer from the following options:\n- {{ answer_choices | join(\"\\n - \") }}\n|||\n{{ answer_choices[label] }}",
+        "prompt": "context_question_description_answer_text",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_context_question_description_text": {
+        "rule": "{{ context }}\nQuestion: {{ question }}\nThe answer to the above question:\n|||\n{{ answer_choices[label] }}",
+        "prompt": "context_question_description_text",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_description_context_question_answer_id": {
+        "rule": "Read the following context and choose the best option to answer the question.\nContext: {{ context }}\nQuestion: {{ question }}\nOptions: \nA. {{ answer0 }}\nB. {{ answer1 }}\nC. {{ answer2 }}\nD. {{ answer3 }}\n|||\n{{ answer_choices[label] }}",
+        "prompt": "description_context_question_answer_id",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_description_context_question_answer_text": {
+        "rule": "Read the following context and choose the best option to answer the question.\nContext: {{ context }}\nQuestion: {{ question }}\nOptions: \n- {{ answer_choices | join(\"\\n - \") }}\n|||\n{{ answer_choices[label] }}",
+        "prompt": "description_context_question_answer_text",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_description_context_question_text": {
+        "rule": "Read the following context and answer the question.\nContext: {{ context }}\nQuestion: {{ question }}\nAnswer:\n|||\n{{ answer_choices[label] }}",
+        "prompt": "description_context_question_text",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_no_prompt_id": {
+        "rule": "{{ context }}\n{{ question }}\nA. {{ answer0 }}\nB. {{ answer1 }}\nC. {{ answer2 }}\nD. {{ answer3 }}\n|||\n{{ answer_choices[label] }}",
+        "prompt": "no_prompt_id",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_no_prompt_text": {
+        "rule": "{{ context }}\n{{ question }}\n- {{ answer_choices | join(\"\\n - \") }}\n|||\n{{ answer_choices[label] }}",
+        "prompt": "no_prompt_text",
+        "x": "cosmos_qa"
+    },
+    "cosmos_qa_only_question_answer": {
+        "rule": "{{question}} \n|||\n{{ answer_choices[label] }}",
+        "prompt": "only_question_answer",
+        "x": "cosmos_qa"
+    },
+    "dbpedia_14_given_a_choice_of_categories_": {
+        "rule": "{{title}} - {{content}} Given a choice of categories {{\"company, educational institution, artist, athlete, office holder, mean of transportation, building, natural place, village, animal, plant, album, film or written work\"}}, the text refers to which one? ||| {{ answer_choices[label] }}",
+        "prompt": "given_a_choice_of_categories ",
+        "x": "dbpedia_14"
+    },
+    "dbpedia_14_given_a_list_of_category_what_does_the_title_belong_to": {
+        "rule": "\"{{title}}\", given a list of categories: {{\"company, educational institution, artist, athlete, office holder, mean of transportation, building, natural place, village, animal, plant, album, film or written work\"}}, what category does the title belong to? ||| {{ answer_choices[label] }}\n\n",
+        "prompt": "given_a_list_of_category_what_does_the_title_belong_to",
+        "x": "dbpedia_14"
+    },
+    "dbpedia_14_given_list_what_category_does_the_paragraph_belong_to": {
+        "rule": "{{content}} Given a list of categories: {{\"company, educational institution, artist, athlete, office holder, mean of transportation, building, natural place, village, animal, plant, album, film or written work\"}}, what category does the paragraph belong to? ||| {{ answer_choices[label] }}\n\n",
+        "prompt": "given_list_what_category_does_the_paragraph_belong_to",
+        "x": "dbpedia_14"
+    },
+    "dbpedia_14_pick_one_category_for_the_following_text": {
+        "rule": "Pick one category for the following text. The options are - {{\"company, educational institution, artist, athlete, office holder, mean of transportation, building, natural place, village, animal, plant, album, film or written work\"}}. {{title}} - {{content}} ||| {{ answer_choices[label] }}",
+        "prompt": "pick_one_category_for_the_following_text",
+        "x": "dbpedia_14"
+    },
+    "dream_answer_to_dialogue": {
+        "rule": "Given the question \"{{question}}\" and the answer \"{{answer}}\", write a conversation that might have happened.\n|||\n{{dialogue | join(\"\\n\\n\")}}",
+        "prompt": "answer-to-dialogue",
+        "x": "dream"
+    },
+    "dream_baseline": {
+        "rule": "Dialogue:\n\n{{dialogue | join(\"\\n\\n\")}}\n\nQuestion: {{question}} \n\n- {{answer_choices[0]}}\n\n- {{answer_choices[1]}}\n\n- {{answer_choices[2]}}\n|||\n{{answer}}",
+        "prompt": "baseline",
+        "x": "dream"
+    },
+    "dream_generate_first_utterance": {
+        "rule": "{{dialogue[1:] | join(\"\\n\\n\")}}\n\nWhat was said before this conversation?\n|||\n{{dialogue[0]}}",
+        "prompt": "generate-first-utterance",
+        "x": "dream"
+    },
+    "dream_generate_last_utterance": {
+        "rule": "Read the below conversation.\n\n{{dialogue[:-1] | join(\"\\n\\n\")}}\n\nWhat would the listener say?\n|||\n{{dialogue[-1]}}",
+        "prompt": "generate-last-utterance",
+        "x": "dream"
+    },
+    "dream_read_the_following_conversation_and_answer_the_question": {
+        "rule": "Read the following conversation and answer the question.\n\n{{dialogue | join(\"\\n\\n\")}}\n\nQuestion: {{question}} \n\n- {{answer_choices[0]}}\n\n- {{answer_choices[1]}}\n\n- {{answer_choices[2]}}\n|||\n{{answer}}",
+        "prompt": "read_the_following_conversation_and_answer_the_question",
+        "x": "dream"
+    },
+    "duorc_ParaphraseRC_answer_question": {
+        "rule": "Please answer the following question about this movie plot. If it's un-answerable, please output \"{{\"No answer\"}}\".\n\nQuestion: {{question}}\nMovie plot title: {{title}}\nMovie plot: {{plot}}\n|||\n{% if no_answer %}\nNo answer\n{% else %}\n{{answers | choice }}\n{% endif %}",
+        "prompt": "answer_question",
+        "x": "duorc/ParaphraseRC"
+    },
+    "duorc_ParaphraseRC_build_story_around_qa": {
+        "rule": "{% if no_answer == false%}\nBuild a movie plot around this: {{ question }} {{answers|choice}}\n|||\n{{ plot }}\n{% endif %}",
+        "prompt": "build_story_around_qa",
+        "x": "duorc/ParaphraseRC"
+    },
+    "duorc_ParaphraseRC_decide_worth_it": {
+        "rule": "I am trying to decide whether it's worth it to invest in this film proposal. Can you help me answer a few questions? If you can't, please say \"{{\"No I can't\"}}\".\n\nQuestion: {{question}}\nMovie title: {{title}}\nMovie plot: {{plot}}\n|||\n{% if no_answer %}\nNo I can't\n{% else %}\n{{answers|choice}}\n{% endif %}",
+        "prompt": "decide_worth_it",
+        "x": "duorc/ParaphraseRC"
+    },
+    "duorc_ParaphraseRC_extract_answer": {
+        "rule": "Extract the answer to the following question from the movie plot. If the question isn't answerable, please output \"{{\"Can't answer\"}}\".\nQuestion: {{question}}\nTitle: {{title}}\nMovie plot: {{plot}}\n|||\n{% if no_answer %}\nCan't answer\n{% else %}\n{{answers | choice }}\n{% endif %}",
+        "prompt": "extract_answer",
+        "x": "duorc/ParaphraseRC"
+    },
+    "duorc_ParaphraseRC_generate_question": {
+        "rule": "Generate a question about the following movie plot: {{ plot }}\n|||\n{{ question }}",
+        "prompt": "generate_question",
+        "x": "duorc/ParaphraseRC"
+    },
+    "duorc_ParaphraseRC_generate_question_by_answer": {
+        "rule": "{% if no_answer == false%}\nGenerate a question that has the following answer: \n{{answers|choice}} \nfor the following movie plot: \n{{plot}}\n|||\n{{question}}\n{% endif %}",
+        "prompt": "generate_question_by_answer",
+        "x": "duorc/ParaphraseRC"
+    },
+    "duorc_ParaphraseRC_movie_director": {
+        "rule": "I am a movie director and I just received the following movie plot. Could you help me answer this question? If not, let me know by writing \"{{\"Not answerable\"}}\".\n\nPlot title: {{title}}\nMovie plot: {{plot}}\nMy question: {{question}}\n|||\n{% if no_answer %}\nNot answerable\n{% else %}\n{{answers|choice}}\n{% endif %}",
+        "prompt": "movie_director",
+        "x": "duorc/ParaphraseRC"
+    },
+    "duorc_ParaphraseRC_question_answering": {
+        "rule": "Question: {{question}}\nIf there is no answer, please output \"{{\"Insufficient information to provide an answer.\"}}\".\nMovie title: {{title}}\nContext: {{plot}}\n|||\n{% if no_answer %}\nInsufficient information to provide an answer.\n{% else %}\n{{answers|choice}}\n{% endif %}",
+        "prompt": "question_answering",
+        "x": "duorc/ParaphraseRC"
+    },
+    "duorc_ParaphraseRC_title_generation": {
+        "rule": "Suggest a movie title for the following movie plot: {{plot}}\n|||\n{{title}}",
+        "prompt": "title_generation",
+        "x": "duorc/ParaphraseRC"
+    },
+    "duorc_SelfRC_answer_question": {
+        "rule": "Please answer the following question about this movie plot. If it's un-answerable, please output \"{{\"No answer\"}}\".\n\nQuestion: {{question}}\nMovie plot title: {{title}}\nMovie plot: {{plot}}\n|||\n{% if no_answer %}\nNo answer\n{% else %}\n{{answers | choice }}\n{% endif %}",
+        "prompt": "answer_question",
+        "x": "duorc/SelfRC"
+    },
+    "duorc_SelfRC_build_story_around_qa": {
+        "rule": "{% if no_answer == false%}\nBuild a movie plot around this: {{ question }} {{answers|choice}}\n|||\n{{ plot }}\n{% endif %}",
+        "prompt": "build_story_around_qa",
+        "x": "duorc/SelfRC"
+    },
+    "duorc_SelfRC_decide_worth_it": {
+        "rule": "I am trying to decide whether it's worth it to invest in this film proposal. Can you help me answer a few questions? If you can't, please say \"{{\"No I can't\"}}\".\n\nQuestion: {{question}}\nMovie title: {{title}}\nMovie plot: {{plot}}\n|||\n{% if no_answer %}\nNo I can't\n{% else %}\n{{answers|choice}}\n{% endif %}",
+        "prompt": "decide_worth_it",
+        "x": "duorc/SelfRC"
+    },
+    "duorc_SelfRC_extract_answer": {
+        "rule": "Extract the answer to the following question from the movie plot. If the question isn't answerable, please output \"{{\"Can't answer\"}}\".\nQuestion: {{question}}\nTitle: {{title}}\nMovie plot: {{plot}}\n|||\n{% if no_answer %}\nCan't answer\n{% else %}\n{{answers | choice }}\n{% endif %}",
+        "prompt": "extract_answer",
+        "x": "duorc/SelfRC"
+    },
+    "duorc_SelfRC_generate_question": {
+        "rule": "Generate a question about the following movie plot: {{ plot }}\n|||\n{{ question }}",
+        "prompt": "generate_question",
+        "x": "duorc/SelfRC"
+    },
+    "duorc_SelfRC_generate_question_by_answer": {
+        "rule": "{% if no_answer == false%}\nGenerate a question that has the following answer: \n{{answers|choice}} \nfor the following movie plot: \n{{plot}}\n|||\n{{question}}\n{% endif %}",
+        "prompt": "generate_question_by_answer",
+        "x": "duorc/SelfRC"
+    },
+    "duorc_SelfRC_movie_director": {
+        "rule": "I am a movie director and I just received the following movie plot. Could you help me answer this question? If not, let me know by writing \"{{\"Not answerable\"}}\".\n\nPlot title: {{title}}\nMovie plot: {{plot}}\nMy question: {{question}}\n|||\n{% if no_answer %}\nNot answerable\n{% else %}\n{{answers|choice}}\n{% endif %}",
+        "prompt": "movie_director",
+        "x": "duorc/SelfRC"
+    },
+    "duorc_SelfRC_question_answering": {
+        "rule": "Question: {{question}}\nIf there is no answer, please output \"{{\"Insufficient information to provide an answer.\"}}\".\nMovie title: {{title}}\nContext: {{plot}}\n|||\n{% if no_answer %}\nInsufficient information to provide an answer.\n{% else %}\n{{answers|choice}}\n{% endif %}",
+        "prompt": "question_answering",
+        "x": "duorc/SelfRC"
+    },
+    "duorc_SelfRC_title_generation": {
+        "rule": "Suggest a movie title for the following movie plot: {{plot}}\n|||\n{{title}}",
+        "prompt": "title_generation",
+        "x": "duorc/SelfRC"
+    },
+    "gigaword_TLDR": {
+        "rule": "{{document}}\n\nTL;DR: ||| {{summary}}",
+        "prompt": "TLDR",
+        "x": "gigaword"
+    },
+    "gigaword_first_sentence_title": {
+        "rule": "First sentence of the article: {{document}}\n\nTitle: ||| {{summary}}",
+        "prompt": "first_sentence_title",
+        "x": "gigaword"
+    },
+    "gigaword_generate_summary_for_this": {
+        "rule": "{{document}}\n\n===\n\nGenerate a title for this article: ||| {{summary}}",
+        "prompt": "generate_summary_for_this",
+        "x": "gigaword"
+    },
+    "gigaword_in_a_nutshell": {
+        "rule": "{{document}} In a nutshell, ||| {{summary}}",
+        "prompt": "in_a_nutshell",
+        "x": "gigaword"
+    },
+    "gigaword_make_a_title": {
+        "rule": "Make a title for this article: {{document}} |||\n\n{{summary}}",
+        "prompt": "make_a_title",
+        "x": "gigaword"
+    },
+    "gigaword_reverse_writing": {
+        "rule": "Title: {{summary}}\n\n||| {{document}}",
+        "prompt": "reverse_writing",
+        "x": "gigaword"
+    },
+    "gigaword_write_a_title_for_this_sentence": {
+        "rule": "Write a title for this sentence: {{document}} \n\nTitle: ||| {{summary}}",
+        "prompt": "write_a_title_for_this_sentence",
+        "x": "gigaword"
+    },
+    "gigaword_write_an_article": {
+        "rule": "Title: {{summary}}\n\n===\n\nWrite an article with the given title: ||| {{document}}",
+        "prompt": "write_an_article",
+        "x": "gigaword"
+    },
+    "gigaword_write_its_sentence": {
+        "rule": "{{document}}\n\n===\n\nGiven the above sentence, write its title: ||| {{summary}}",
+        "prompt": "write_its_sentence",
+        "x": "gigaword"
+    },
+    "glue_mrpc_equivalent": {
+        "rule": "Are the following two sentences \"{{\"equivalent\"}}\" or \"{{\"not equivalent\"}}\"?\n{{sentence1}}\n{{sentence2}}\n|||\n{{ answer_choices[label] }}",
+        "prompt": "equivalent",
+        "x": "glue/mrpc"
+    },
+    "glue_mrpc_generate_paraphrase": {
+        "rule": "{% if label == 1 %}\nParaphrase the following sentence: {{sentence1}}\n|||\n{{sentence2}}\n{% endif %}",
+        "prompt": "generate_paraphrase",
+        "x": "glue/mrpc"
+    },
+    "glue_mrpc_generate_sentence": {
+        "rule": "{% if label == 1 %}\nGenerate a sentence that means the same thing as this one: {{sentence1}}\n|||\n{{sentence2}}\n{% endif %}",
+        "prompt": "generate_sentence",
+        "x": "glue/mrpc"
+    },
+    "glue_mrpc_paraphrase": {
+        "rule": "Does the sentence\n{{sentence1}}\nparaphrase (that is, mean the same thing as) this sentence?\n{{sentence2}}\n|||\n{{ answer_choices[label] }}",
+        "prompt": "paraphrase",
+        "x": "glue/mrpc"
+    },
+    "glue_mrpc_replace": {
+        "rule": "Can I replace the sentence\n{{sentence1}}\nwith the sentence\n{{sentence2}}\nand have it mean the same thing?\n|||\n{{ answer_choices[label] }}",
+        "prompt": "replace",
+        "x": "glue/mrpc"
+    },
+    "glue_mrpc_same_thing": {
+        "rule": "Do the following two sentences mean the same thing?\n{{sentence1}}\n{{sentence2}}\n|||\n{{ answer_choices[label] }}",
+        "prompt": "same thing",
+        "x": "glue/mrpc"
+    },
+    "glue_mrpc_want_to_know": {
+        "rule": "I want to know whether the following two sentences mean the same thing.\n{{sentence1}}\n{{sentence2}}\nDo they?\n|||\n{{ answer_choices[label] }}",
+        "prompt": "want to know",
+        "x": "glue/mrpc"
+    },
+    "glue_qqp_answer": {
+        "rule": "Can an answer to \"{{question1}}\" also be used to answer \"{{question2}}\"? ||| {{ answer_choices[label] }}",
+        "prompt": "answer",
+        "x": "glue/qqp"
+    },
+    "glue_qqp_duplicate": {
+        "rule": "I received the questions \"{{question1}}\" and \"{{question2}}\". Are they duplicates? ||| {{ answer_choices[label] }}",
+        "prompt": "duplicate",
+        "x": "glue/qqp"
+    },
+    "glue_qqp_duplicate_or_not": {
+        "rule": "{{question1}}\n{{question2}}\nPick one: These questions are \"{{\"duplicates\"}}\" or \"{{\"not duplicates\"}}\".\n|||\n{{ answer_choices[label] }}",
+        "prompt": "duplicate or not",
+        "x": "glue/qqp"
+    },
+    "glue_qqp_meaning": {
+        "rule": "Question 1: {{question1}}\nQuestion 2: {{question2}}\n\nDo these two questions convey the same meaning? Yes or no? ||| {{answer_choices[label]}}",
+        "prompt": "meaning",
+        "x": "glue/qqp"
+    },
+    "glue_qqp_quora": {
+        "rule": "I'm an administrator on the website Quora. There are two posts, one that asks \"{{question1}}\" and another that asks \"{{question2}}\". I can merge questions if they are asking the same thing. Can I merge these two questions? ||| {{ answer_choices[label] }}",
+        "prompt": "quora",
+        "x": "glue/qqp"
+    },
+    "glue_qqp_same_thing": {
+        "rule": "Are the questions \"{{question1}}\" and \"{{question2}}\" asking the same thing? ||| {{ answer_choices[label] }}",
+        "prompt": "same thing",
+        "x": "glue/qqp"
+    },
+    "imdb_Movie_Expressed_Sentiment": {
+        "rule": "{{text}} The sentiment expressed for the movie is ||| {{ answer_choices [label] }}",
+        "prompt": "Movie Expressed Sentiment",
+        "x": "imdb"
+    },
+    "imdb_Movie_Expressed_Sentiment_2": {
+        "rule": "The following movie review expresses what sentiment? {{text}} ||| {{ answer_choices [label] }}",
+        "prompt": "Movie Expressed Sentiment 2",
+        "x": "imdb"
+    },
+    "imdb_Negation_template_for_positive_and_negative": {
+        "rule": "{{text}} This is definitely not a ||| {{ answer_choices [1-label]}} review.",
+        "prompt": "Negation template for positive and negative",
+        "x": "imdb"
+    },
+    "imdb_Reviewer_Enjoyment": {
+        "rule": "{{text}} How does the reviewer feel about the movie? ||| {{ answer_choices [label] }}",
+        "prompt": "Reviewer Enjoyment",
+        "x": "imdb"
+    },
+    "imdb_Reviewer_Enjoyment_Yes_No": {
+        "rule": "{{text}} Did the reviewer enjoy the movie? ||| {{ answer_choices [label] }}",
+        "prompt": "Reviewer Enjoyment Yes No",
+        "x": "imdb"
+    },
+    "imdb_Reviewer_Expressed_Sentiment": {
+        "rule": "{{text}} What is the sentiment expressed by the reviewer for the movie? ||| {{ answer_choices [label] }}",
+        "prompt": "Reviewer Expressed Sentiment",
+        "x": "imdb"
+    },
+    "imdb_Reviewer_Opinion_bad_good_choices": {
+        "rule": "{{text}} Did the reviewer find this movie {{\"good or bad\"}}? ||| {{ answer_choices [label] }}",
+        "prompt": "Reviewer Opinion bad good choices",
+        "x": "imdb"
+    },
+    "imdb_Reviewer_Sentiment_Feeling": {
+        "rule": "{{text}} How does the viewer feel about the movie? ||| {{ answer_choices [label] }}",
+        "prompt": "Reviewer Sentiment Feeling",
+        "x": "imdb"
+    },
+    "imdb_Sentiment_with_choices_": {
+        "rule": "{{text}} \nIs this review {{\"positive or negative\"}}? ||| \n{{answer_choices[label] }}",
+        "prompt": "Sentiment with choices ",
+        "x": "imdb"
+    },
+    "imdb_Text_Expressed_Sentiment": {
+        "rule": "{{text}} What is the sentiment expressed in this text? ||| {{ answer_choices [label] }}",
+        "prompt": "Text Expressed Sentiment",
+        "x": "imdb"
+    },
+    "imdb_Writer_Expressed_Sentiment": {
+        "rule": "{{text}} What sentiment does the writer express for the movie? ||| {{ answer_choices [label] }}",
+        "prompt": "Writer Expressed Sentiment",
+        "x": "imdb"
+    },
+    "kilt_tasks_hotpotqa_combining_facts": {
+        "rule": "{% if output %}\nCombine facts and answer this: {{input}}\n|||\n{{output | map(attribute=\"answer\") | list | choice}}\n{% endif %}",
+        "prompt": "combining_facts",
+        "x": "kilt_tasks/hotpotqa"
+    },
+    "kilt_tasks_hotpotqa_complex_question": {
+        "rule": "{% if output %}\nHere's a complex question that requires someone to reason about the input, can you answer it?\n{{input}}\n|||\n{{output | map(attribute=\"answer\") | list | choice}}\n{% endif %}",
+        "prompt": "complex_question",
+        "x": "kilt_tasks/hotpotqa"
+    },
+    "kilt_tasks_hotpotqa_final_exam": {
+        "rule": "{% if output %}\nFINAL EXAM\n\nQuestion 1. {{input}}\n|||\n{{output | map(attribute=\"answer\") | list | choice}}\n{% endif %}",
+        "prompt": "final_exam",
+        "x": "kilt_tasks/hotpotqa"
+    },
+    "kilt_tasks_hotpotqa_formulate": {
+        "rule": "{% if output %}\nFormulate an answer to this elaborate question: {{input}}\n|||\n{{output | map(attribute=\"answer\") | list | choice}}\n{% endif %}",
+        "prompt": "formulate",
+        "x": "kilt_tasks/hotpotqa"
+    },
+    "kilt_tasks_hotpotqa_straighforward_qa": {
+        "rule": "{% if output %}\n{{input}}\n|||\n{{output | map(attribute=\"answer\") | list | choice}}\n{% endif %}",
+        "prompt": "straighforward_qa",
+        "x": "kilt_tasks/hotpotqa"
+    },
+    "multi_news_distill": {
+        "rule": "{% set docs = document.split(\"3ed2dface8203c4c9dfb1a5dc58e41e0||\") | reject(\"equalto\", \"\") | list %}\nI'm trying to distill these articles down into one:\n{% for doc in docs %}\n\nArticle: {{doc}}\n{% endfor %}\n|||\n{{summary[2:]}}",
+        "prompt": "distill",
+        "x": "multi_news"
+    },
+    "multi_news_expand_reverse_task_": {
+        "rule": "{% set docs = document.split(\"3ed2dface8203c4c9dfb1a5dc58e41e0||\") | reject(\"equalto\", \"\") | list%}\nWrite an expanded news article with plausible details from the following summary:\n{{summary[2:]}}\n|||\n{{docs | choice}}",
+        "prompt": "expand (reverse task)",
+        "x": "multi_news"
+    },
+    "multi_news_summarize": {
+        "rule": "{% set docs = document.split(\"3ed2dface8203c4c9dfb1a5dc58e41e0||\") | reject(\"equalto\", \"\") | list %}\nWrite a summary of the following articles:\n{% for doc in docs %}\n\nDocument: {{doc}}\n{% endfor %}\n|||\n{{summary[2:]}}",
+        "prompt": "summarize",
+        "x": "multi_news"
+    },
+    "multi_news_summary_scenario": {
+        "rule": "{% set docs = document.split(\"3ed2dface8203c4c9dfb1a5dc58e41e0||\") | reject(\"equalto\", \"\") | list %}\nI want to edit the following articles into a more concise summary:\n{% for doc in docs %}\n\nArticle: {{doc}}\n{% endfor %}\n|||\n{{summary[2:]}}",
+        "prompt": "summary scenario",
+        "x": "multi_news"
+    },
+    "multi_news_synthesize": {
+        "rule": "{% set docs = document.split(\"3ed2dface8203c4c9dfb1a5dc58e41e0||\") | reject(\"equalto\", \"\") | list %}\nSynthesize these documents into a single one:\n{% for doc in docs %}\n\n- {{doc}}\n{% endfor %}\n|||\n{{summary[2:]}}",
+        "prompt": "synthesize",
+        "x": "multi_news"
+    },
+    "multi_news_what_are_the_key_points": {
+        "rule": "{% set docs = document.split(\"3ed2dface8203c4c9dfb1a5dc58e41e0||\") | reject(\"equalto\", \"\") | list %}\nWhat are the key points across these news articles:\n{% for doc in docs %}\n\nArticle: {{doc}}\n{% endfor %}\n|||\n{{summary[2:]}}",
+        "prompt": "what are the key points",
+        "x": "multi_news"
+    },
+    "paws_labeled_final_Concatenation": {
+        "rule": "Sentence 1: {{sentence1}}\nSentence 2: {{sentence2}}\nQuestion: Does Sentence 1 paraphrase Sentence 2? Yes or No? \n||| \n{{answer_choices[label]}}",
+        "prompt": "Concatenation",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_Concatenation_no_label": {
+        "rule": "Sentence 1: {{sentence1}}\nSentence 2: {{sentence2}}\nQuestion: Does Sentence 1 paraphrase Sentence 2? \n||| \n{{answer_choices[label]}}",
+        "prompt": "Concatenation-no-label",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_Meaning": {
+        "rule": "Sentence 1: {{sentence1}}\nSentence 2: {{sentence2}}\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No? \n||| \n{{answer_choices[label]}}",
+        "prompt": "Meaning",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_Meaning_no_label": {
+        "rule": "Sentence 1: {{sentence1}}\nSentence 2: {{sentence2}}\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? \n||| \n{{answer_choices[label]}}",
+        "prompt": "Meaning-no-label",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_PAWS_ANLI_GPT3": {
+        "rule": "{{sentence1}} Question: {{sentence2}} True or False? \n||| \n{{answer_choices[label]}}",
+        "prompt": "PAWS-ANLI GPT3",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_PAWS_ANLI_GPT3_no_label": {
+        "rule": "{{sentence1}} Question: {{sentence2}} Paraphrase or not?\n||| \n{{answer_choices[label]}}",
+        "prompt": "PAWS-ANLI GPT3-no-label",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_Rewrite": {
+        "rule": "Sentence 1: {{sentence1}}\nSentence 2: {{sentence2}}\nQuestion: Can we rewrite Sentence 1 to Sentence 2? Yes or No? \n||| \n{{answer_choices[label]}}",
+        "prompt": "Rewrite",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_Rewrite_no_label": {
+        "rule": "Sentence 1: {{sentence1}}\nSentence 2: {{sentence2}}\nQuestion: Can we rewrite Sentence 1 to Sentence 2? \n||| \n{{answer_choices[label]}}",
+        "prompt": "Rewrite-no-label",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_context_question": {
+        "rule": "{{sentence1}}\nIs that a paraphrase of the following sentence?\n{{sentence2}}?\nYes or No.\n||| \n{{answer_choices[label]}}",
+        "prompt": "context-question",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_context_question_no_label": {
+        "rule": "{{sentence1}}\nIs that a paraphrase of the following sentence?\n{{sentence2}}?\n||| \n{{answer_choices[label]}}",
+        "prompt": "context-question-no-label",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_paraphrase_task": {
+        "rule": "{% if label == 1 %} \nParaphrase the sentence: {{sentence1}} \n||| \n{{sentence2}} \n{% endif %}",
+        "prompt": "paraphrase-task",
+        "x": "paws/labeled_final"
+    },
+    "paws_labeled_final_task_description_no_label": {
+        "rule": "Determine if the following two sentences paraphrase each other or not.\nSent 1: {{sentence1}}\nSent 2: {{sentence2}}\n||| \n{{answer_choices[label]}}",
+        "prompt": "task_description-no-label",
+        "x": "paws/labeled_final"
+    },
+    "qasc_is_correct_1": {
+        "rule": "If I tell you that {{combinedfact[0]|capitalize}}{{ combinedfact[1:]|trim('.') }}, and ask you the question \"{{ question[0]|lower }}{{ question[1:] }}\", is the correct answer \"{{ choices.text[0][0]|lower}}{{ choices.text[0][1:]|trim('.') }}\"? \n\n||| \n\n{% if answerKey == choices.label[0] %} Yes {% else %} No {% endif %}",
+        "prompt": "is_correct_1",
+        "x": "qasc"
+    },
+    "qasc_is_correct_2": {
+        "rule": "Do you think the right answer to the question \"{{ question[0]|lower }}{{ question[1:] }}\" is \"{{ choices.text[1][0]|lower}}{{ choices.text[1][1:]|trim('.') }}\", given that\n {{combinedfact[0]|lower}}{{ combinedfact[1:]|trim('.') }}?\n ||| \n{% if answerKey == choices.label[0] %} Yes {% else %} No {% endif %}   ",
+        "prompt": "is_correct_2",
+        "x": "qasc"
+    },
+    "qasc_qa_with_combined_facts_1": {
+        "rule": "If {{ combinedfact[0]|lower }}{{ combinedfact[1:]|trim|trim('.') }}, then {{ question[0]|lower }}{{question[1:]|trim|trim('?') }}?\n\nAnswer choices:\n- {{answer_choices | join(\"\\n - \") }}\n||| \n\n{% for choice in choices.label %} {% if choice == answerKey %}{{ answer_choices[loop.index - 1] }}{% endif %}{% endfor %}  ",
+        "prompt": "qa_with_combined_facts_1",
+        "x": "qasc"
+    },
+    "qasc_qa_with_separated_facts_1": {
+        "rule": "{{ fact1[0]|capitalize }}{{ fact1[1:]|trim|trim('.') }}, and {{fact2[0]|lower }}{{ fact2[1:]|trim|trim('.') }}. Given these facts, {{ question[0]|lower }}{{question[1:]|trim('?') }} among the following options:\n- {{answer_choices | join(\"\\n - \") }}\n\n||| \n\n{% for choice in choices.label %} {% if choice == answerKey %}{{ answer_choices[loop.index - 1] }}{% endif %}{% endfor %} ",
+        "prompt": "qa_with_separated_facts_1",
+        "x": "qasc"
+    },
+    "qasc_qa_with_separated_facts_2": {
+        "rule": "Fact 1: {{ fact1[0]|capitalize }}{{ fact1[1:]|trim|trim('.') }}.\n\nFact 2: {{fact2[0]|capitalize }}{{ fact2[1:]|trim|trim('.') }}.\n\nGiven the two facts above, answer the question \"{{ question }}\" with the following options: \n- {{answer_choices | join(\"\\n - \") }}\n\n||| \n\n{% for choice in choices.label %} {% if choice == answerKey %}{{ answer_choices[loop.index - 1] }}{% endif %}{% endfor %} ",
+        "prompt": "qa_with_separated_facts_2",
+        "x": "qasc"
+    },
+    "qasc_qa_with_separated_facts_3": {
+        "rule": "Fact 1: {{ fact1[0]|capitalize }}{{ fact1[1:]|trim|trim('.') }}.\n\nFact 2: {{fact2[0]|capitalize }}{{ fact2[1:]|trim|trim('.') }}.\n\nGiven the two facts above, {{ question[0]|lower }}{{question[1:]|trim('?') }}?\n\n||| \n\n{% for choice in choices.label %} {% if choice == answerKey %}{{ answer_choices[loop.index - 1] }}{% endif %}{% endfor %}  ",
+        "prompt": "qa_with_separated_facts_3",
+        "x": "qasc"
+    },
+    "qasc_qa_with_separated_facts_4": {
+        "rule": "You are presented with the question \"{{ question }}\" and the following answer choices: \n- {{answer_choices | join(\"\\n - \") }}\n\nNow knowing that {{ fact1[0]|lower }}{{ fact1[1:]|trim|trim('.') }} and {{fact2[0]|lower }}{{ fact2[1:]|trim|trim('.') }}, choose the best answer.\n\n||| \n\n{% for choice in choices.label %} {% if choice == answerKey %}{{ answer_choices[loop.index - 1] }}{% endif %}{% endfor %} ",
+        "prompt": "qa_with_separated_facts_4",
+        "x": "qasc"
+    },
+    "qasc_qa_with_separated_facts_5": {
+        "rule": "You are presented with the quiz \"{{ question }}\" \n\nBut you don't know the answer, so you turn to your teacher to ask for hints. He says that \"{{ fact1[0]|lower }}{{ fact1[1:]|trim|trim('.') }}\" and \"{{fact2[0]|lower }}{{ fact2[1:]|trim|trim('.') }}\". \n\nSo, what's the best answer to the question?\n\n||| \n\n{% for choice in choices.label %} {% if choice == answerKey %}{{ answer_choices[loop.index - 1] }}{% endif %}{% endfor %}   ",
+        "prompt": "qa_with_separated_facts_5",
+        "x": "qasc"
+    },
+    "quail_context_description_question_answer_id": {
+        "rule": "{{ context }}\nAccording to the above context, choose the correct option to answer the following question.\nQuestion: {{ question }}\nOptions:\n{% for k in range(answers | length) %}\n{{'. '.join([answer_choices[k], answers[k]])}}\n{% endfor %}\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "context_description_question_answer_id",
+        "x": "quail"
+    },
+    "quail_context_description_question_answer_text": {
+        "rule": "{{ context }}\nAccording to the above context, choose the correct option to answer the following question.\nQuestion: {{ question }}\nOptions:\n- {{ answer_choices | join(\"\\n- \") }}\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "context_description_question_answer_text",
+        "x": "quail"
+    },
+    "quail_context_description_question_text": {
+        "rule": "{{ context }}\nAccording to the above context, answer the following question.\n{{ question }}\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "context_description_question_text",
+        "x": "quail"
+    },
+    "quail_context_question_answer_description_id": {
+        "rule": "{{ context }}\nQuestion: {{ question }}\nOptions:\n{% for k in range(answers | length) %}\n{{'. '.join([answer_choices[k], answers[k]])}}\n{% endfor %}\n===\nThe correct answer is\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "context_question_answer_description_id",
+        "x": "quail"
+    },
+    "quail_context_question_answer_description_text": {
+        "rule": "{{ context }}\nQuestion: {{ question }}\nOptions:\n- {{ answer_choices | join(\" \\n - \") }}\n===\nThe correct answer is\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "context_question_answer_description_text",
+        "x": "quail"
+    },
+    "quail_context_question_description_answer_id": {
+        "rule": "{{ context }}\n{{ question }}\nPick the correct answer from the following options:\n{% for k in range(answers | length) %}\n{{'. '.join([answer_choices[k], answers[k]])}}\n{% endfor %}\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "context_question_description_answer_id",
+        "x": "quail"
+    },
+    "quail_context_question_description_answer_text": {
+        "rule": "{{ context }}\n{{ question }}\nPick the correct answer from the following options:\n- {{ answer_choices | join(\"\\n- \") }}\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "context_question_description_answer_text",
+        "x": "quail"
+    },
+    "quail_context_question_description_text": {
+        "rule": "{{ context }}\nQuestion: {{ question }}\n===\nThe answer to the above question is\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "context_question_description_text",
+        "x": "quail"
+    },
+    "quail_description_context_question_answer_id": {
+        "rule": "Read the following context and choose the correct option to answer the question.\nContext: {{ context }}\nQuestion: {{ question }}\nOptions:\n{% for k in range(answers | length) %}\n{{'. '.join([answer_choices[k], answers[k]])}}\n{% endfor %}\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "description_context_question_answer_id",
+        "x": "quail"
+    },
+    "quail_description_context_question_answer_text": {
+        "rule": "Read the following context and choose the correct option to answer the question.\nContext: {{ context }}\nQuestion: {{ question }}\nOptions:\n- {{ answer_choices | join(\"\\n- \") }}\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "description_context_question_answer_text",
+        "x": "quail"
+    },
+    "quail_description_context_question_text": {
+        "rule": "Read the following context and answer the question.\nContext: {{ context }}\nQuestion: {{ question }}\nAnswer:\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "description_context_question_text",
+        "x": "quail"
+    },
+    "quail_no_prompt_id": {
+        "rule": "{{ context }}\n{{ question }}\n{% for k in range(answers | length) %}\n{{'. '.join([answer_choices[k], answers[k]])}}\n{% endfor %}\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "no_prompt_id",
+        "x": "quail"
+    },
+    "quail_no_prompt_text": {
+        "rule": "{{ context }}\n{{ question }}\n- {{ answer_choices | join(\"\\n- \") }}\n|||\n{{ answer_choices[correct_answer_id] }}",
+        "prompt": "no_prompt_text",
+        "x": "quail"
+    },
+    "quartz_answer_question_based_on": {
+        "rule": "Answer the question based on the following text.\n\nQuestion:\n\n{% if '_____' in question %}\n{{ question | trim(\".?!\") | replace(\"_____\", answer_choices | join(\" or \")) }}{{ \"?\" }} \n{% else %}\n{{ question | trim(\".?!\") }} {{ answer_choices | join(\" or \") }}{{ \"?\" }} \n{% endif %}\n\nText:\n\n{{ para }}|||\n{{answer_choices[choices.label.index(answerKey)]}}",
+        "prompt": "answer_question_based_on",
+        "x": "quartz"
+    },
+    "quartz_answer_question_below": {
+        "rule": "Answer the question below:\n\n{% if '_____' in question %}\n{{ question | trim(\".?!\") | replace(\"_____\", answer_choices | join(\" or \")) }}{{ \"?\" }} \n{% else %}\n{{ question | trim(\".?!\") }} {{  answer_choices | join(\" or \") }}{{ \"?\" }} \n{% endif %}\n\nAssuming that:\n\n{{ para }}|||\n{{answer_choices[choices.label.index(answerKey)]}}",
+        "prompt": "answer_question_below",
+        "x": "quartz"
+    },
+    "quartz_given_the_fact_answer_the_q": {
+        "rule": "Given the fact that:\n\n{{ para }}\n\nAnswer the question:\n\n{% if '_____' in question %}\n{{ question | trim(\".?!\") | replace(\"_____\", answer_choices | join(\" or \")) }}{{ \"?\" }} \n{% else %}\n{{ question | trim(\".?!\") }} {{ answer_choices | join(\" or \") }}{{ \"?\" }} \n{% endif %}\n|||\n{{answer_choices[choices.label.index(answerKey)]}}",
+        "prompt": "given_the_fact_answer_the_q",
+        "x": "quartz"
+    },
+    "quartz_having_read_above_passage": {
+        "rule": "{{ para }}\n\nHaving read the above passage, choose the right answer to the following question (choices are {{ answer_choices | join(\" or \") }} ):\n\n{% if '_____' in question %}\n{{ question | trim(\".?!\") | replace(\"_____\", answer_choices | join(\" or \")) }}{{ \"?\" }} \n{% else %}\n{{ question | trim(\".?!\") }} {{ answer_choices | join(\" or \") }}{{ \"?\" }} \n{% endif %}\n|||\n{{answer_choices[choices.label.index(answerKey)]}}",
+        "prompt": "having_read_above_passage",
+        "x": "quartz"
+    },
+    "quartz_paragraph_question_plain_concat": {
+        "rule": "{{ para }}\n{% if '_____' in question %}\n{{ question | trim(\".?!\") | replace(\"_____\", answer_choices | join(\" or \")) }}{{ \"?\" }} \n{% else %}\n{{ question | trim(\".?!\")}} {{ answer_choices | join(\" or \") }}{{ \"?\" }} \n{% endif %}\n|||\n{{answer_choices[choices.label.index(answerKey)]}}",
+        "prompt": "paragraph_question_plain_concat",
+        "x": "quartz"
+    },
+    "quartz_read_passage_below_choose": {
+        "rule": "Read the passage below and choose the right answer to the following question (choices are {{ answer_choices | join(\" or \") }} ):\n\n{{ para }}\n\n{% if '_____' in question %}\n{{ question | trim(\".?!\") | replace(\"_____\", answer_choices | join(\" or \")) }}{{ \"?\" }} \n{% else %}\n{{ question | trim(\".?!\") }} {{ answer_choices | join(\" or \") }}{{ \"?\" }} \n{% endif %}\n|||\n{{answer_choices[choices.label.index(answerKey)]}}",
+        "prompt": "read_passage_below_choose",
+        "x": "quartz"
+    },
+    "quartz_use_info_from_paragraph_question": {
+        "rule": "Use information from the paragraph to answer the question.\n\nParagraph :\n\n{{ para }}\n\nQuestion:\n\n{% if '_____' in question %}\n{{ question | trim(\".?!\") | replace(\"_____\", answer_choices | join(\" or \")) }}{{ \"?\" }} \n{% else %}\n{{ question | trim(\".?!\") }} {{ answer_choices | join(\" or \") }}{{ \"?\" }} \n{% endif %}\n|||\n{{answer_choices[choices.label.index(answerKey)]}}",
+        "prompt": "use_info_from_paragraph_question",
+        "x": "quartz"
+    },
+    "quartz_use_info_from_question_paragraph": {
+        "rule": "Use information from the paragraph to answer the question.\n\nQuestion:\n\n{% if '_____' in question %}\n{{ question | trim(\".?!\") | replace(\"_____\", answer_choices | join(\" or \")) }}{{ \"?\" }} \n{% else %}\n{{ question | trim(\".?!\") }} {{ answer_choices | join(\" or \") }}{{ \"?\" }} \n{% endif %}\n\nParagraph :\n\n{{ para }}\n|||\n{{answer_choices[choices.label.index(answerKey)]}}",
+        "prompt": "use_info_from_question_paragraph",
+        "x": "quartz"
+    },
+    "quoref_Answer_Friend_Question": {
+        "rule": "A friend asked me to answer this question: {{question}}, using the article: {{context}}, what would be the answer ?\n\n|||\n{{answers.text | choice}}\n",
+        "prompt": "Answer Friend Question",
+        "x": "quoref"
+    },
+    "quoref_Answer_Question_Given_Context": {
+        "rule": "Given the following context:\n\n{{context}}\n\nanswer the following question:\n\n{{question}} |||\n{{answers.text | choice}}",
+        "prompt": "Answer Question Given Context",
+        "x": "quoref"
+    },
+    "quoref_Answer_Test": {
+        "rule": "I have a test where I am given the following article, what is an answer for the question: {{question}} ?\n\n{{context}}|||\n{{answers.text | choice}}",
+        "prompt": "Answer Test",
+        "x": "quoref"
+    },
+    "quoref_Context_Contains_Answer": {
+        "rule": "This article: {{context}} contains an answer for the question: {{question}}, what is it ?\n|||\n{{answers.text | choice}}",
+        "prompt": "Context Contains Answer",
+        "x": "quoref"
+    },
+    "quoref_Find_Answer": {
+        "rule": "The following article contains an answer for the question: {{question}} , can you please find it? \n\n{{context}}|||\n{{answers.text | choice}}",
+        "prompt": "Find Answer",
+        "x": "quoref"
+    },
+    "quoref_Found_Context_Online": {
+        "rule": "Found the following article online, use it to answer the question: {{question}}\n\n{{context}}|||\n{{answers.text | choice}}\n",
+        "prompt": "Found Context Online",
+        "x": "quoref"
+    },
+    "quoref_Given_Context_Answer_Question": {
+        "rule": "{{question}}\n\nAnswer the above question based on the context below:\n\n{{context}} |||\n{{answers.text | choice}}",
+        "prompt": "Given Context Answer Question",
+        "x": "quoref"
+    },
+    "quoref_Guess_Answer": {
+        "rule": "The answer to the question: {{question}} is inside the article: {{context}}, can you guess it ?\n\n|||\n{{answers.text | choice}}\n",
+        "prompt": "Guess Answer",
+        "x": "quoref"
+    },
+    "quoref_Guess_Title_For_Context": {
+        "rule": "Given the below context:\n\n{{context}}\n\nGuess a valid title for it! |||\n{{title}}",
+        "prompt": "Guess Title For Context",
+        "x": "quoref"
+    },
+    "quoref_Read_And_Extract_": {
+        "rule": "Read the following paragraph and extract the answer for the question: {{question}}\n\n{{context}} |||\n{{answers.text | choice}}",
+        "prompt": "Read And Extract ",
+        "x": "quoref"
+    },
+    "quoref_What_Is_The_Answer": {
+        "rule": "What is the answer for the question: {{question}} from the following article ?\n\n{{context}}|||\n{{answers.text | choice}}\n",
+        "prompt": "What Is The Answer",
+        "x": "quoref"
+    },
+    "ropes_background_new_situation_answer": {
+        "rule": "{% if answers.text %}\nI can use this background: {{background}}\n\nNow, I have a new situation: {{situation}}\n\nAnswer this question please: {{question}}|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "background_new_situation_answer",
+        "x": "ropes"
+    },
+    "ropes_background_situation_middle": {
+        "rule": "{% if answers.text %}\nYou are given a new situation: {{situation}}\n\nand a hint : {{background}}\n\nPlease answer this question : {{question}}|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "background_situation_middle",
+        "x": "ropes"
+    },
+    "ropes_given_background_situation": {
+        "rule": "{% if answers.text %}\nGiven the background: {{background}}\n\nand the situation: {{situation}}\n\nAnswer the following question: {{question}}|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "given_background_situation",
+        "x": "ropes"
+    },
+    "ropes_new_situation_background_answer": {
+        "rule": "{% if answers.text %}\nI have a new situation: {{situation}}\n\nBut I can use this background: {{background}}\n\nWhat is an answer for this question: {{question}}|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "new_situation_background_answer",
+        "x": "ropes"
+    },
+    "ropes_plain_background_situation": {
+        "rule": "{% if answers.text %}\n{{ background }}\n\n{{ situation }}\n\n{{ question }}\n|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "plain_background_situation",
+        "x": "ropes"
+    },
+    "ropes_plain_bottom_hint": {
+        "rule": "{% if answers.text %}\n{{ situation }}\n\n{{ question }}\n\nHint: {{ background }}\n|||\n{{ answers.text | choice}}\n{% endif %}",
+        "prompt": "plain_bottom_hint",
+        "x": "ropes"
+    },
+    "ropes_plain_no_background": {
+        "rule": "{% if answers.text %}\n{{ situation }}\n\n{{ question }}\n\n|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "plain_no_background",
+        "x": "ropes"
+    },
+    "ropes_prompt_beginning": {
+        "rule": "{% if answers.text %}\nPlease answer correctly the following question related to the paragraph below. \n\n{{ question }}\n\n{{ situation }}\n\nHint: {{ background }}\n|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "prompt_beginning",
+        "x": "ropes"
+    },
+    "ropes_prompt_bottom_hint_beginning": {
+        "rule": "{% if answers.text %}\nBackground: {{ background }}\n\nParagraph: {{ situation }}\n\nGiven the paragraph above, please answer correctly the following question: {{ question }}\n|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "prompt_bottom_hint_beginning",
+        "x": "ropes"
+    },
+    "ropes_prompt_bottom_no_hint": {
+        "rule": "{% if answers.text %}\n{{ situation }}\n\nGiven the paragraph above, please answer correctly the following question: \n\n{{ question }}\n|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "prompt_bottom_no_hint",
+        "x": "ropes"
+    },
+    "ropes_prompt_mix": {
+        "rule": "{% if answers.text %}\n{{ situation }}\n\nGiven the paragraph above, please answer correctly the following question: \n\n{{ question }}\n\nHint: {{ background }}\n|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "prompt_mix",
+        "x": "ropes"
+    },
+    "ropes_read_background_situation": {
+        "rule": "{% if answers.text %}\nI read this background article the other day: {{background}}\n\nI am facing a new situation today: {{situation}}\n\nUsing the knowledge I acquired from the background article, how should I answer correctly the following question regarding my new situation: {{question}}|||\n{{ answers.text | choice }}\n{% endif %}",
+        "prompt": "read_background_situation",
+        "x": "ropes"
+    },
+    "rotten_tomatoes_Movie_Expressed_Sentiment": {
+        "rule": "{{text}} The sentiment expressed for the movie is ||| {{ answer_choices [label] }}",
+        "prompt": "Movie Expressed Sentiment",
+        "x": "rotten_tomatoes"
+    },
+    "rotten_tomatoes_Movie_Expressed_Sentiment_2": {
+        "rule": "The following movie review expresses what sentiment? {{text}} ||| {{ answer_choices [label] }}",
+        "prompt": "Movie Expressed Sentiment 2",
+        "x": "rotten_tomatoes"
+    },
+    "rotten_tomatoes_Reviewer_Enjoyment": {
+        "rule": "{{text}} How does the reviewer feel about the movie? ||| {{ answer_choices [label] }}",
+        "prompt": "Reviewer Enjoyment",
+        "x": "rotten_tomatoes"
+    },
+    "rotten_tomatoes_Reviewer_Enjoyment_Yes_No": {
+        "rule": "{{text}} Did the reviewer enjoy the movie? ||| {{ answer_choices [label] }}",
+        "prompt": "Reviewer Enjoyment Yes No",
+        "x": "rotten_tomatoes"
+    },
+    "rotten_tomatoes_Reviewer_Expressed_Sentiment": {
+        "rule": "{{text}} What is the sentiment expressed by the reviewer for the movie? ||| {{ answer_choices [label] }}",
+        "prompt": "Reviewer Expressed Sentiment",
+        "x": "rotten_tomatoes"
+    },
+    "rotten_tomatoes_Reviewer_Opinion_bad_good_choices": {
+        "rule": "{{text}} Did the reviewer find this movie {{\"good or bad\"}}? ||| {{ answer_choices [label] }}",
+        "prompt": "Reviewer Opinion bad good choices",
+        "x": "rotten_tomatoes"
+    },
+    "rotten_tomatoes_Reviewer_Sentiment_Feeling": {
+        "rule": "{{text}} How does the viewer feel about the movie? ||| {{ answer_choices [label] }}",
+        "prompt": "Reviewer Sentiment Feeling",
+        "x": "rotten_tomatoes"
+    },
+    "rotten_tomatoes_Sentiment_with_choices_": {
+        "rule": "{{text}} \nIs this review {{\"positive or negative\"}}? ||| \n{{answer_choices[label] }}",
+        "prompt": "Sentiment with choices ",
+        "x": "rotten_tomatoes"
+    },
+    "rotten_tomatoes_Text_Expressed_Sentiment": {
+        "rule": "{{text}} What is the sentiment expressed in this text? ||| {{ answer_choices [label] }}",
+        "prompt": "Text Expressed Sentiment",
+        "x": "rotten_tomatoes"
+    },
+    "rotten_tomatoes_Writer_Expressed_Sentiment": {
+        "rule": "{{text}} What sentiment does the writer express for the movie? ||| {{ answer_choices [label] }}",
+        "prompt": "Writer Expressed Sentiment",
+        "x": "rotten_tomatoes"
+    },
+    "samsum_Generate_a_summary_for_this_dialogue": {
+        "rule": "Generate a summary for this dialogue:\n{{dialogue}}\n|||{{summary}}",
+        "prompt": "Generate a summary for this dialogue",
+        "x": "samsum"
+    },
+    "samsum_Given_the_above_dialogue_write_a_summary": {
+        "rule": "{{dialogue}}\nGiven the above dialogue, write a summary. |||\n{{summary}}",
+        "prompt": "Given the above dialogue write a summary",
+        "x": "samsum"
+    },
+    "samsum_Sum_up_the_following_dialogue": {
+        "rule": "Sum up the following dialogue: \n{{dialogue}}\n|||{{summary}}",
+        "prompt": "Sum up the following dialogue",
+        "x": "samsum"
+    },
+    "samsum_Summarize_": {
+        "rule": "Summarize: {{dialogue}}|||\n{{summary}}",
+        "prompt": "Summarize:",
+        "x": "samsum"
+    },
+    "samsum_Summarize_this_dialogue_": {
+        "rule": "Summarize this dialogue: {{dialogue}} |||\n{{summary}}",
+        "prompt": "Summarize this dialogue:",
+        "x": "samsum"
+    },
+    "samsum_To_sum_up_this_dialog": {
+        "rule": "{{dialogue}}\nTo sum up this dialog:\n|||{{summary}}",
+        "prompt": "To sum up this dialog",
+        "x": "samsum"
+    },
+    "samsum_Write_a_dialogue_that_match_this_summary": {
+        "rule": "Write a dialogue that matches this summary: {{summary}} |||\n{{dialogue}}",
+        "prompt": "Write a dialogue that match this summary",
+        "x": "samsum"
+    },
+    "sciq_Direct_Question": {
+        "rule": "Answer the following question given this paragraph: \n\n{{support}}\n\n\nQ: {{question}}\n\n\nA:|||{{answer_choices[3]}}\n",
+        "prompt": "Direct Question",
+        "x": "sciq"
+    },
+    "sciq_Direct_Question_Closed_Book_": {
+        "rule": "Q: {{question}}\n\n\nA:|||{{answer_choices[3]}}\n",
+        "prompt": "Direct Question (Closed Book)",
+        "x": "sciq"
+    },
+    "sciq_Multiple_Choice": {
+        "rule": "{% set order = [[0, 1, 2, 3], [0, 1, 3, 2], [0, 2, 1, 3], [0, 2, 3, 1], [0, 3, 1, 2], [0, 3, 2, 1],\n                             [1, 0, 2, 3], [1, 0, 3, 2], [1, 2, 0, 3], [1, 2, 3, 0], [1, 3, 0, 2], [1, 3, 2, 0],\n                             [2, 1, 0, 3], [2, 1, 0, 2], [2, 0, 1, 3], [2, 0, 3, 1], [2, 3, 1, 0], [2, 3, 0, 1],\n                             [3, 1, 2, 0], [3, 1, 0, 2], [3, 2, 1, 0], [3, 2, 0, 1], [3, 0, 1, 2], [3, 0, 2, 1]] | choice %}\nAnswer the following question given this paragraph: \n\n{{support}}\n\n\nQ: {{question}}\n\n Choices:\n\n- {{ answer_choices[order[0]] }}\n\n- {{ answer_choices[order[1]] }}\n\n- {{ answer_choices[order[2]] }}\n\n- {{ answer_choices[order[3]] }}\n\nA:|||{{answer_choices[3]}}\n\n",
+        "prompt": "Multiple Choice",
+        "x": "sciq"
+    },
+    "sciq_Multiple_Choice_Closed_Book_": {
+        "rule": "{% set order = [[0, 1, 2, 3], [0, 1, 3, 2], [0, 2, 1, 3], [0, 2, 3, 1], [0, 3, 1, 2], [0, 3, 2, 1],\n                             [1, 0, 2, 3], [1, 0, 3, 2], [1, 2, 0, 3], [1, 2, 3, 0], [1, 3, 0, 2], [1, 3, 2, 0],\n                             [2, 1, 0, 3], [2, 1, 0, 2], [2, 0, 1, 3], [2, 0, 3, 1], [2, 3, 1, 0], [2, 3, 0, 1],\n                             [3, 1, 2, 0], [3, 1, 0, 2], [3, 2, 1, 0], [3, 2, 0, 1], [3, 0, 1, 2], [3, 0, 2, 1]] | choice %}\nQ: {{question}}\n\n\n Choices:\n\n- {{ answer_choices[order[0]] }}\n\n- {{ answer_choices[order[1]] }}\n\n- {{ answer_choices[order[2]] }}\n\n- {{ answer_choices[order[3]] }}\n\nA:|||{{answer_choices[3]}}",
+        "prompt": "Multiple Choice (Closed Book)",
+        "x": "sciq"
+    },
+    "sciq_Multiple_Choice_Question_First": {
+        "rule": "{% set order = [[0, 1, 2, 3], [0, 1, 3, 2], [0, 2, 1, 3], [0, 2, 3, 1], [0, 3, 1, 2], [0, 3, 2, 1],\n                             [1, 0, 2, 3], [1, 0, 3, 2], [1, 2, 0, 3], [1, 2, 3, 0], [1, 3, 0, 2], [1, 3, 2, 0],\n                             [2, 1, 0, 3], [2, 1, 0, 2], [2, 0, 1, 3], [2, 0, 3, 1], [2, 3, 1, 0], [2, 3, 0, 1],\n                             [3, 1, 2, 0], [3, 1, 0, 2], [3, 2, 1, 0], [3, 2, 0, 1], [3, 0, 1, 2], [3, 0, 2, 1]] | choice %}\nQ: {{question}}\n\n\nRead this paragraph and choose the correct option from the provided answers:\n\n{{support}}\n\n Choices:\n\n- {{ answer_choices[order[0]] }}\n\n- {{ answer_choices[order[1]] }}\n\n- {{ answer_choices[order[2]] }}\n\n- {{ answer_choices[order[3]] }}\n\n\nA:|||{{answer_choices[3]}}\n",
+        "prompt": "Multiple Choice Question First",
+        "x": "sciq"
+    },
+    "social_i_qa_Check_if_a_random_answer_is_valid_or_not": {
+        "rule": "{% set random_answer_id = range(0,2) | choice%}\n{% set answers = [answerA, answerB, answerC] %}\n{{context}}\n\nGiven the question \"{{question}}\", is \"{{answers[random_answer_id]}}\" a valid answer?\n\n|||\n\n{% if (label | int) - 1 == random_answer_id %}\n    Yes\n{% else %}\n    No\n{% endif %}",
+        "prompt": "Check if a random answer is valid or not",
+        "x": "social_i_qa"
+    },
+    "social_i_qa_Generate_answer": {
+        "rule": "{{context}}\n\nGiven the context: {{question}}\n\n|||\n\n{{answer_choices[label | int - 1]}}",
+        "prompt": "Generate answer",
+        "x": "social_i_qa"
+    },
+    "social_i_qa_Generate_the_question_from_the_answer": {
+        "rule": "{{context}}\n\nGiven that the answer to a question is \"{{{\"1\": answerA, \"2\": answerB, \"3\": answerC}[label]}}\", what is the question?\n\n|||\n\n{{question}}",
+        "prompt": "Generate the question from the answer",
+        "x": "social_i_qa"
+    },
+    "social_i_qa_I_was_wondering": {
+        "rule": "I heard that {{context}}\n\nAnd I was wondering {{question}}\n\n|||\n\n{{answer_choices[label | int - 1]}}",
+        "prompt": "I was wondering",
+        "x": "social_i_qa"
+    },
+    "social_i_qa_Show_choices_and_generate_answer": {
+        "rule": "{{context}}\n\nGiven the context: {{question}}\n\nPossible answers: {{answer_choices | join(\", \")}}\n\n|||\n\n{{answer_choices[label | int - 1]}}",
+        "prompt": "Show choices and generate answer",
+        "x": "social_i_qa"
+    },
+    "social_i_qa_Show_choices_and_generate_index": {
+        "rule": "Context: {{context}}\n\nQuestion: {{question}}\n\nWhich one of these answers best answers the question according to the context?\n\nA: {{answerA}}\n\nB: {{answerB}}\n\nC: {{answerC}}\n\n|||\n\n{{{\"1\": \"A\", \"2\": \"B\", \"3\": \"C\"}[label]}}",
+        "prompt": "Show choices and generate index",
+        "x": "social_i_qa"
+    },
+    "wiki_bio_comprehension": {
+        "rule": "Read the bio below and try to give details on {{input_text[\"context\"]}}'s: \n{% for n in range (input_text[\"table\"][\"column_header\"]|length) %} {% if input_text[\"table\"][\"column_header\"][n] != \"article_title\" %}\n- {{ input_text[\"table\"][\"column_header\"][n].replace(\"_\",\" \") }} \n{% endif %} {% endfor %}\n\nBio: {{target_text}} |||\n{% for n in range (input_text[\"table\"][\"column_header\"]|length) %}\n{% if input_text[\"table\"][\"column_header\"][n] != \"article_title\" %}\n- {{ input_text[\"table\"][\"column_header\"][n].replace(\"_\",\" \") }} is {{ input_text[\"table\"][\"content\"][n] }}\n{% endif %}\n{% endfor %}\n",
+        "prompt": "comprehension",
+        "x": "wiki_bio"
+    },
+    "wiki_bio_guess_person": {
+        "rule": "{% for n in range (input_text[\"table\"][\"column_header\"]|length) %}\n{% if input_text[\"table\"][\"column_header\"][n] != \"article_title\" and input_text[\"table\"][\"column_header\"][n] !=\"name\" %}\n- {{ input_text[\"table\"][\"column_header\"][n].replace(\"_\",\" \") }} is {{ input_text[\"table\"][\"content\"][n] }}\n{% endif %}\n{% endfor %}\n\nGiven the details above, guess who could this information be about. |||\n{{input_text[\"context\"]}}\n",
+        "prompt": "guess_person",
+        "x": "wiki_bio"
+    },
+    "wiki_bio_key_content": {
+        "rule": "What key details about {{input_text[\"context\"]}} can be extracted from the following bio?\n\nBio: {{target_text}} |||\n{% for n in range (input_text[\"table\"][\"column_header\"]|length) %}\n{% if input_text[\"table\"][\"column_header\"][n] != \"article_title\" %}\n- {{ input_text[\"table\"][\"column_header\"][n].replace(\"_\",\" \") }} is {{ input_text[\"table\"][\"content\"][n] }}\n{% endif %}\n{% endfor %}",
+        "prompt": "key_content",
+        "x": "wiki_bio"
+    },
+    "wiki_bio_what_content": {
+        "rule": "What type of details about {{input_text[\"context\"]}} can be gathered from the following bio?\n\nBio: {{target_text}} |||\n{% for n in range (input_text[\"table\"][\"column_header\"]|length) %}\n{% if input_text[\"table\"][\"column_header\"][n] != \"article_title\" %}\n- {{ input_text[\"table\"][\"column_header\"][n].replace(\"_\",\" \") }} \n{% endif %}\n{% endfor %}",
+        "prompt": "what_content",
+        "x": "wiki_bio"
+    },
+    "wiki_bio_who": {
+        "rule": "Facts:\n{% for n in range (input_text[\"table\"][\"column_header\"]|length) %}\n{% if input_text[\"table\"][\"column_header\"][n] != \"article_title\" %}\n- {{input_text[\"table\"][\"column_header\"][n].replace(\"_\",\" \") }}: {{input_text[\"table\"][\"content\"][n] }}\n{% endif %}\n{% endfor %}\nBased on these bullet points, write a short biography describing the life of {{input_text[\"context\"]}}. |||\n{{target_text}}",
+        "prompt": "who",
+        "x": "wiki_bio"
+    },
+    "wiki_hop_original_choose_best_object_affirmative_1": {
+        "rule": "Information:\n{% for support in supports %}\n- {{ support }}\n{% endfor %}\n\n{% set question_split = question.split(' ') %}\nGiven the information above, choose from the list below the object entity that exhibits the relation '{{ question_split[0] | replace(\"_\", \" \")}}' with the subject '{{ question_split[1:] | join(\" \")}}'.\n\nChoices:\n- {{answer_choices | join(\"\\n - \") }}\n\n|||\n{{answer}}",
+        "prompt": "choose_best_object_affirmative_1",
+        "x": "wiki_hop/original"
+    },
+    "wiki_hop_original_choose_best_object_affirmative_2": {
+        "rule": "Information:\n{% for support in supports %}\n- {{ support }}\n{% endfor %}\n\n{% set question_split = question.split(' ') %}\nAfter reading the paragraphs above, choose the best answer for the entity that related to '{{ question_split[1:] | join(\" \")}}' with the relationship of '{{ question_split[0] | replace(\"_\", \" \")}}'.\n\nChoices:\n- {{answer_choices | join(\"\\n - \") }}\n\n|||\n{{answer}}",
+        "prompt": "choose_best_object_affirmative_2",
+        "x": "wiki_hop/original"
+    },
+    "wiki_hop_original_choose_best_object_affirmative_3": {
+        "rule": "Information:\n{% for support in supports %}\n- {{ support }}\n{% endfor %}\n\n{% set question_split = question.split(' ') %}\nAfter reading the paragraphs above, we are interested in knowing the entity with which '{{ question_split[1:] | join(\" \")}}' exhibits the relationship of '{{ question_split[0] | replace(\"_\", \" \")}}'. Find the answer from the choices below.\n\nChoices:\n- {{answer_choices | join(\"\\n - \") }}\n\n|||\n{{answer}}",
+        "prompt": "choose_best_object_affirmative_3",
+        "x": "wiki_hop/original"
+    },
+    "wiki_hop_original_choose_best_object_interrogative_1": {
+        "rule": "Information:\n{% for support in supports %}\n- {{ support }}\n{% endfor %}\n\n{% set question_split = question.split(' ') %}\nWhat object entity has the relation of '{{ question_split[0] | replace(\"_\", \" \")}}' with the subject '{{ question_split[1:] | join(\" \")}}'? \n\nChoices:\n- {{answer_choices | join(\"\\n - \") }}\n\n|||\n{{answer}}",
+        "prompt": "choose_best_object_interrogative_1",
+        "x": "wiki_hop/original"
+    },
+    "wiki_hop_original_choose_best_object_interrogative_2": {
+        "rule": "Information:\n{% for support in supports %}\n- {{ support }}\n{% endfor %}\n\n{% set question_split = question.split(' ') %}\n'{{ question_split[1:] | join(\" \")}}' is related to which object entity through the relation of '{{ question_split[0] | replace(\"_\", \" \")}}'?\n\nChoices:\n- {{answer_choices | join(\"\\n - \") }}\n\n|||\n{{answer}}",
+        "prompt": "choose_best_object_interrogative_2",
+        "x": "wiki_hop/original"
+    },
+    "wiki_hop_original_explain_relation": {
+        "rule": "Information:\n{% for support in supports %}\n- {{ support }}\n{% endfor %}\n\n{% set question_split = question.split(' ') %}\nWhat is the relationship between '{{ question_split[1:] | join(\" \")}}' and '{{answer}}'?\n\n|||\n{{ question_split[0] | replace(\"_\", \" \") }}",
+        "prompt": "explain_relation",
+        "x": "wiki_hop/original"
+    },
+    "wiki_hop_original_generate_object": {
+        "rule": "Information:\n{% for support in supports %}\n- {{ support }}\n{% endfor %}\n\n{% set question_split = question.split(' ') %}\nWhat entity does '{{ question_split[1:] | join(\" \")}}' has the relation '{{ question_split[0] | replace(\"_\", \" \") }}' with?\n\n|||\n{{answer}}",
+        "prompt": "generate_object",
+        "x": "wiki_hop/original"
+    },
+    "wiki_hop_original_generate_subject": {
+        "rule": "Information:\n{% for support in supports %}\n- {{ support }}\n{% endfor %}\n\n{% set question_split = question.split(' ') %}\nGiven the paragraphs above, decide what entity has the relation '{{ question_split[0] | replace(\"_\", \" \") }}' with '{{answer}}'.\n\n|||\n{{ question_split[1:] | join(\" \")}}",
+        "prompt": "generate_subject",
+        "x": "wiki_hop/original"
+    },
+    "wiki_hop_original_generate_subject_and_object": {
+        "rule": "Information:\n{% for support in supports %}\n- {{ support }}\n{% endfor %}\n\n{% set question_split = question.split(' ') %}\nGiven the information, choose the subject and object entities that have the relation of '{{ question_split[0] | replace(\"_\", \" \") }}'.\n\n|||\n{{ question_split[1:] | join(\" \") }} , {{answer}}",
+        "prompt": "generate_subject_and_object",
+        "x": "wiki_hop/original"
+    },
+    "wiki_qa_Decide_good_answer": {
+        "rule": "This is a correct answer to the following question about {{document_title}}. Yes or no?\nAnswer: {{answer}}\nQuestion: {{question}}\n|||\n{{answer_choices[label]}}",
+        "prompt": "Decide_good_answer",
+        "x": "wiki_qa"
+    },
+    "wiki_qa_Direct_Answer_to_Question": {
+        "rule": "{% if label == 1 %}\nAnswer this question: {{question}}?|||\n{{answer}}\n{% endif %}",
+        "prompt": "Direct Answer to Question",
+        "x": "wiki_qa"
+    },
+    "wiki_qa_Generate_Question_from_Topic": {
+        "rule": "{% if label == 1 %}\nGenerate a question about the topic \"{{document_title}}\" whose answer would be: {{answer}}.|||\n{{question}}?\n{% endif %}\n",
+        "prompt": "Generate Question from Topic",
+        "x": "wiki_qa"
+    },
+    "wiki_qa_Is_This_True_": {
+        "rule": "Question: {{question}}?\nWould \"{{answer}}\" be a reasonable answer? |||\n{{ answer_choices[label] }}",
+        "prompt": "Is This True?",
+        "x": "wiki_qa"
+    },
+    "wiki_qa_Jeopardy_style": {
+        "rule": "{% if label == 1 %}\nWhat is the question to: \"{{answer}}\"? The topic is {{document_title}}.|||\n\"{{question}}?\"\n{% endif %}\n",
+        "prompt": "Jeopardy style",
+        "x": "wiki_qa"
+    },
+    "wiki_qa_Topic_Prediction_Answer_Only": {
+        "rule": "{% if label == 1 %}\nDetermine the topic of the passage.\n\"{{answer}}\"\nTopic:|||\n{{document_title}}\n{% endif %}\n",
+        "prompt": "Topic Prediction - Answer Only",
+        "x": "wiki_qa"
+    },
+    "wiki_qa_Topic_Prediction_Question_Only": {
+        "rule": "{% if label == 1 %}\nDetermine the topic of the question.\nQuestion: \"{{question}}?\"\nTopic: |||\n{{document_title}}\n{% endif %}",
+        "prompt": "Topic Prediction - Question Only",
+        "x": "wiki_qa"
+    },
+    "wiki_qa_Topic_Prediction_Question_and_Answer_Pair": {
+        "rule": "{% if label == 1 %}\nDetermine the topic of the question-answer pair.\nQuestion: \"{{question}}?\";  Answer: \"{{answer}}\"? Topic: |||\n{{document_title}}\n{% endif %}\n",
+        "prompt": "Topic Prediction - Question and Answer Pair",
+        "x": "wiki_qa"
+    },
+    "wiki_qa_automatic_system": {
+        "rule": "I am verifying the answers generated by an automatic system to the following question: {{question}}\nSuggested answer: {{answer}}\nShould I validate this answer?\n|||\n{{answer_choices[label]}}",
+        "prompt": "automatic_system",
+        "x": "wiki_qa"
+    },
+    "wiki_qa_exercise": {
+        "rule": "The exercise is to decide whether the question accepts the proposed suggestion as a correct answer. If yes, write \"{{answer_choices[1]}}\", otherwise write \"{{answer_choices[0]}}\".\nQuestion: {{question}}\nSuggestion: {{answer}}\n|||\n{{answer_choices[label]}}",
+        "prompt": "exercise",
+        "x": "wiki_qa"
+    },
+    "wiki_qa_found_on_google": {
+        "rule": "Question: {{question}}\nI found the following answer on Google: {{answer}}\nIs that a correct answer? Yes or no.\n|||\n{{answer_choices[label]}}",
+        "prompt": "found_on_google",
+        "x": "wiki_qa"
+    },
+    "wiqa_does_the_supposed_perturbation_have_an_effect": {
+        "rule": "Process:\n\n- {{ question_para_step | join(\"\\n- \") }}\n\nPerturbation hypothesis:\n{{question_stem}}\n\nDoes the supposed perturbation have an effect (direct or indirect) on the process?\n\n|||\n\n{{{\"EXOGENOUS_EFFECT\": \"yes\", \"OUTOFPARA_DISTRACTOR\": \"no\", \"INPARA_EFFECT\": \"yes\"}[metadata_question_type]}}",
+        "prompt": "does_the_supposed_perturbation_have_an_effect",
+        "x": "wiqa"
+    },
+    "wiqa_effect_with_label_answer": {
+        "rule": "Process:\n- {{ question_para_step | join(\"\\n- \")}}\n\nQuestion:\n{{question_stem}}\n\n- {{\"A: more\"}}\n- {{\"B: less\"}}\n- {{\"C: no effect\"}}\n\n|||\n\n{{answer_label_as_choice}}",
+        "prompt": "effect_with_label_answer",
+        "x": "wiqa"
+    },
+    "wiqa_effect_with_string_answer": {
+        "rule": "Process:\n- {{ question_para_step | join(\"\\n- \")}}\n\nQuestion:\n{{question_stem}}\n\nHow does the supposed perturbation influence the second effect mentioned. Answer by {{\"more, less or no effect\"}}\n\n|||\n\n{{answer_label|replace(\"_\", \" \")}}",
+        "prompt": "effect_with_string_answer",
+        "x": "wiqa"
+    },
+    "wiqa_what_is_the_final_step_of_the_following_process": {
+        "rule": " {% set process_list = question_para_step[:-1] if question_para_step[-1] == \"\" else question_para_step %}\nWhat is the final step of the following process:\n-  {{ process_list[:-1] | join(\"\\n- \") }}\n\n|||\n\n{{ process_list | last }}\n",
+        "prompt": "what_is_the_final_step_of_the_following_process",
+        "x": "wiqa"
+    },
+    "wiqa_what_is_the_missing_first_step": {
+        "rule": "What is the missing first step of the following process:\n\n-  {{ question_para_step[1:] | join(\"\\n- \") }}\n\n|||\n\n{{ question_para_step | first }}",
+        "prompt": "what_is_the_missing_first_step",
+        "x": "wiqa"
+    },
+    "wiqa_what_might_be_the_first_step_of_the_process": {
+        "rule": "-  {{ question_para_step[1:] | join(\"\\n- \") }}\n\nWhat might be the first step of the process?\n\n|||\n\n{{ question_para_step | first }}\n",
+        "prompt": "what_might_be_the_first_step_of_the_process",
+        "x": "wiqa"
+    },
+    "wiqa_what_might_be_the_last_step_of_the_process": {
+        "rule": "\n{% set process_list = question_para_step[:-1] if question_para_step[-1] == \"\" else question_para_step %}\n-  {{ process_list[:-1] | join(\"\\n- \") }}\n\nWhat might be the last step of the process?\n\n|||\n\n{{ process_list | last }}\n",
+        "prompt": "what_might_be_the_last_step_of_the_process",
+        "x": "wiqa"
+    },
+    "wiqa_which_of_the_following_is_the_supposed_perturbation": {
+        "rule": "Process:\n\n- {{ question_para_step | join(\"\\n- \") }}\n\n{{question_stem}}\n\nWhich of the following is the supposed perturbation?\n\n- {{\"directly impacting a step of the process\"}}\n- {{\"indirectly impacting a step of the process\"}}\n- {{\"not impacting any step of the process\"}}\n\n\n|||\n\n{{{\"EXOGENOUS_EFFECT\": \"indirectly impacting a step of the process\", \"OUTOFPARA_DISTRACTOR\": \"not impacting any step of the process\", \"INPARA_EFFECT\": \"directly impacting a step of the process\"}[metadata_question_type]}}",
+        "prompt": "which_of_the_following_is_the_supposed_perturbation",
+        "x": "wiqa"
+    },
+    "xsum_DOC_boils_down_to_simple_idea_that": {
+        "rule": "{{document}}\nThis boils down to the simple idea that ||| {{summary}}",
+        "prompt": "DOC_boils_down_to_simple_idea_that",
+        "x": "xsum"
+    },
+    "xsum_DOC_given_above_write_one_sentence": {
+        "rule": "{{document}}\n\n===\n\nGiven the above document, write one sentence to summarize: ||| {{summary}}",
+        "prompt": "DOC_given_above_write_one_sentence",
+        "x": "xsum"
+    },
+    "xsum_DOC_how_would_you_rephrase_few_words": {
+        "rule": "{{document}}\nHow would you rephrase that in a few words? ||| {{summary}}",
+        "prompt": "DOC_how_would_you_rephrase_few_words",
+        "x": "xsum"
+    },
+    "xsum_DOC_tldr": {
+        "rule": "{{document}}\n\nTL;DR: ||| {{summary}}",
+        "prompt": "DOC_tldr",
+        "x": "xsum"
+    },
+    "xsum_DOC_write_summary_of_above": {
+        "rule": "{{document}}\n\n===\n\nWrite a summary of the text above : ||| {{summary}}",
+        "prompt": "DOC_write_summary_of_above",
+        "x": "xsum"
+    },
+    "xsum_article_DOC_summary": {
+        "rule": "Article: {{document}}\n\nSummary: ||| {{summary}}",
+        "prompt": "article_DOC_summary",
+        "x": "xsum"
+    },
+    "xsum_college_roommate_asked_DOC_so_I_recap": {
+        "rule": "My college roommate asked me what this article means:\n\n{{document}}\n\nSo I recapped it in layman's terms: ||| {{summary}}",
+        "prompt": "college_roommate_asked_DOC_so_I_recap",
+        "x": "xsum"
+    },
+    "xsum_read_below_DOC_write_abstract": {
+        "rule": "First, please read the article below.\n\n{{document}}\n\nNow, can you write me an extremely short abstract for it?  ||| {{summary}}",
+        "prompt": "read_below_DOC_write_abstract",
+        "x": "xsum"
+    },
+    "xsum_summarize_DOC": {
+        "rule": "Summarize: {{document}}|||\n{{summary}}",
+        "prompt": "summarize_DOC",
+        "x": "xsum"
+    },
+    "xsum_summarize_this_DOC_summary": {
+        "rule": "Summarize this document: {{document}}\nSummary: ||| {{summary}}",
+        "prompt": "summarize_this_DOC_summary",
+        "x": "xsum"
+    },
+    "yelp_review_full_based_on_that": {
+        "rule": "{{ text }}\n===\nBased on that, my rating is ||| {{ answer_choices[label] }}",
+        "prompt": "based_on_that",
+        "x": "yelp_review_full"
+    },
+    "yelp_review_full_format_rating": {
+        "rule": "Review text:\n{{ text }}\n\nReview rating: |||\n{{ answer_choices[label] }}",
+        "prompt": "format_rating",
+        "x": "yelp_review_full"
+    },
+    "yelp_review_full_format_score": {
+        "rule": "Review text:\n{{ text }}\n\nReview score (between 1 and 5): |||\n{{ answer_choices[label] }}",
+        "prompt": "format_score",
+        "x": "yelp_review_full"
+    },
+    "yelp_review_full_format_star": {
+        "rule": "Review text:\n{{ text }}\n\nStars: |||\n{{ answer_choices[label] }}",
+        "prompt": "format_star",
+        "x": "yelp_review_full"
+    },
+    "yelp_review_full_on_a_scale": {
+        "rule": "Review: {{text}}\nOn a scale of 1 to 5, I would give this product ||| {{ answer_choices[label] }}",
+        "prompt": "on_a_scale",
+        "x": "yelp_review_full"
+    },
+    "yelp_review_full_so_i_would": {
+        "rule": "{{ text }}\nSo I would like to give it ||| {{ answer_choices[label] }}",
+        "prompt": "so_i_would",
+        "x": "yelp_review_full"
+    },
+    "yelp_review_full_this_place": {
+        "rule": "{{ text }} My rating for this place is ||| {{ answer_choices[label] }}",
+        "prompt": "this_place",
+        "x": "yelp_review_full"
+    }
+}
